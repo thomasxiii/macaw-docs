@@ -10,6 +10,10 @@
 		margin: 0 auto;
 		width: 80%;
 	}
+	/* work in progress*/
+	.wip {
+		background: yellow;
+	}
 	</style>
 </head>
 <body>
@@ -18,14 +22,26 @@
 
 	<p>Macaw allows for workflow that is similar to that of an image editor. You can draw and move elements freely on the canvas, then style them as you see fit. After that, if good HTML is important to you, you can organize and describe elements in the outline panel. The more Macaw knows about your elements purpose the better code output it will produce.</p>
 
-	<h2 class="content-subhead">Drawing</h2>
+	<p>What's set's Macaw apart from other design software is it's ability to define elements dimensions both in pixels or percentages.</p>
 
-	<p>Primary way of creating content in Macaw is by drawing. There are no constraints where to draw an element. You can draw text elements, containers, buttons or even form elements. Images can be placed on the canvas right from within the library.</p>
+	<h2>The Grid</h2>
 
-	<p>While drawing, elements will snap to grid and smart guides.</p>
-	<img src="design-basics/img/drawing-snapping.gif" alt="">
+	<p>Grid is an essential part of Macaw's workspace and workflow. It helps you to place elements evenly on the page and serves as a guide throughout the whole design process.</p>
+
+	<p>You can set up the grid to match your preferences, using <em>Grid Width</em>, <em>Number of Grid Columns</em> and <em>Space Between Grid Columns</em>. Like many other elements grid width can be set either as in percentages or pixel dimensions.</p>
+
+	<img src="design-basics/img/grid-setting-up.gif" alt="">
+
+	<h2>Drawing</h2>
+
+	<p>Primary way of creating content in Macaw is by drawing. There are no constraints on where to draw an element. You can draw text elements, containers, buttons or even form elements. Images can be placed on the canvas right from within the library.</p>
+
 	<p>You can draw elements with percentage or pixel based widths and positions. These can be also adjusted later.</p>
 	<img src="design-basics/img/percentage-or-px-based-width-and-x.png" alt="">
+
+
+	<p>While drawing, elements will snap to grid, smart guides, canvas boundaries or other elements.</p>
+	<img src="design-basics/img/drawing-snapping.gif" alt="">
 
 	<h3>Elements</h3>
 
@@ -35,11 +51,12 @@
 
 	<p>Design wise containers are used for grouping other elements, but unlike groups in standard design software, containers have their own dimensions (or even paddings) and can be styled just like standard elements.</p>
 
-	<p>You can create containers simply by using the Elements > Group command or by using the Container Tool <strong>G</strong>. You can simply drag over some elements with Container Tool selected, to wrap these elements in a container.</p>
+	<p>You can create containers by using the Elements > Group command. Another way of creating containers is by using the Container Tool <strong>G</strong>, with it selected simply drag over some elements to wrap them in a container. Groups created with Container Tool will immediately have dimensions based on the area you've dragged over while drawing, whereas grouping with Elements > Group command will adjust the group size to fit it's children.</p>
 
-	<p>Groups created with Container Tool will immediately have dimensions based on the area you've dragged over while drawing</p>
+	<p>If among the elements that you are grouping together with Elements > Group command, one seem to fit the task of containing all the other elements, Macaw will ask you if you want to transfer presentation attributes of that element to the newly created group. In other words: Macaw is smart enough to use existing elements as groups when it makes sense, and leave you with cleaner code in the process.</p>
 
-	<p>Groups created with a Container Tool will immediately have dimensions based on the area you've dragged over while drawing, whereas grouping with Elements > Group command will adjust the group size to fit it's children.</p>
+	<img src="design-basics/img/transfering-presentation-attributes.gif" alt="">
+	<p class="wip">This image could be smaller, need to think how to show it on a smaller crop area.</p>
 
 	<h3>Text</h3>
 
