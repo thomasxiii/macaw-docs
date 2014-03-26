@@ -75,6 +75,10 @@
 
 	<p>Hitting <strong>Return/Enter</strong> to separate lines of text inside a text box will result in code output for that box being divided into several paragraphs. You can also use <strong>Shift</strong> + <strong>Return/Enter</strong> to create line breaks (&lt;br&gt;) in the code output.</p>
 
+	<h4 class="wip">Text field dimensions</h4>
+
+	<p class="wip">resize handles dependant on width/height set to auto</p>
+
 	<h4>Fast text prototyping</h4>
 
 	<p>Macaw supports <em>Lorem Ipsum</em> text generation, to quickly fill text boxes with sample copy. To add some generated text to a text box, just double click the text box, type <strong>loremXp</strong> (where X stands for number of paragraphs you wish to create) then hit <strong>TAB</strong> and Macaw will generate X paragraphs of <em>Lorem Ipsum&hellip;</em>.</p>
@@ -88,11 +92,40 @@
 
 	<h3>Inputs</h3>
 
+	<h3>Buttons</h3>
+
+	<p>Buttons are drawn using the button tool <strong>B</strong>. After clicking &amp; dragging on the canvas, the button stays in edit mode, where you can set it's text. Button text is centered by default.</p>
+
+	<p>If you attach a URL to a button using Link field inside Inspector Pane, the button will redirect to that URL through an <strong>onClick</strong> JavaScript event. To change the button to a standard link, change the button tag name inside Inspector Pane to <strong>a</strong>, it will be then converted to a plain <strong>&lt;a&gt;</strong> tag in the output.</p>
+
+	<h3>Input text</h3>
+
+	<p>After drawing an input field, you can type some text inside, that will be used as a HTML5 placeholder text for that field.</p>
+	<p>For Input text field, in the Inspector Pane, apart from element tag name you can additionally set it's name attribute. You can also choose input type, from various types supported by HTML 5, e.g.: text, email, password, number, search, URL.</p>
+
+	<h3>Text area</h3>
+
+	<p>Just like with Input text, after drawing a Text Area you can set it's text which will be used for HTML5 placeholder text.</p>
+
+	<p>In the Inspector Pane you can set Text area's name attribute and set how it should react to resizing attempts after publishing in the browser.</p>
+
+	<h3>Select</h3>
+	<p>Like other form elements, the Select Element can also have it's HTML name attribute set.</p>
+
+	<p class="wip">Multiple options can be added to a Select from within the Inspector Pane. (needs image)</p>
+
+	<h3>Checkbox</h3>
+	<p class="wip">buggy</p>
+
+	<h3>Radio</h3>
+	<p class="wip">buggy</p>
+
 	<h3>Embeds</h3>
 
 	<h2>Positioning (?)</h2>
 
 	<h2>Styling</h2>
+	<p class="wip">Mention predefined styles for elements?</p>
 
 
 </body>
