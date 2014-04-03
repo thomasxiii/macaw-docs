@@ -47,7 +47,7 @@
 
 	<p>Primary way of creating content in Macaw is by drawing. To draw some elements just pick the desired tool from the tool-bar then <strong>click + drag</strong> on the canvas. There are no constraints on where to draw an element, you can draw anywhere on the canvas, including on top of other elements. You can draw text elements, containers, buttons or even form elements. Images can be placed on the canvas right from within the library.</p>
 
-	<p>You can draw elements with percentage or pixel based widths and positions. These can be also adjusted later.</p>
+	<p>You can draw elements with percentage (%) or pixel (px) based widths and positions. These can be also adjusted later.</p>
 	<img src="design-basics/img/percentage-or-px-based-width-and-x.png" alt="">
 
 
@@ -137,7 +137,35 @@
 
 	<h3>Embeds</h3>
 
+	<p class="wip">Not yet implemented</p>
+
 	<h2>Positioning (?)</h2>
+
+	<h3>Positioning types</h3>
+
+	<p>Macaw supports three positioning types: static (default), absolute and fixed. For every element, you can pick which positioning should be used by Macaw.</p>
+
+	<p>To make it easier to identify element positions, element selection boxes, margin indicators and even part of UI that controls the position have colors based on selected element position type. Respective colors are:</p>
+
+	<ul>
+		<li>Static - Blue,</li>
+		<li>Absolute - Orange,</li>
+		<li>Fixed - Green.</li>
+	</ul>
+
+	<img src="design-basics/img/position-static-absolute-fixed.png" alt="">
+
+	<p>Margin indicators (solid semi-transparent blocks) help to determine how an element will be placed on the canvas with relation to the surrounding elements</p>
+
+	<p>Static positioning is the default used by Macaw. Elements with static position are placed using their margin values relating to the canvas or other elements. If elements overlap - negative margins may be used.</p>
+
+	<p class="wip">When static positioning is set to a bunch of elements - they might move if you move the element that their margin relates to. (Really unsure if this is a bug or a feature - needs to be verified. Also might need an animation)</p>
+
+	<p>Absolute positioning allows the elements to be independent of other elements positions. It can also be used to position elements inside their parents.</p>
+
+	<p>Fixed positioning is useful for elements that have to be fixed (pinned) to the page and stay at their position even if the page is scrolled. This allows you to test their behavior during design phase, just like you would in the browser.</p>
+
+	<p class="wip">needs animation</p>
 
 	<h2>Styling</h2>
 	<p class="wip">Mention predefined styles for elements?</p>
