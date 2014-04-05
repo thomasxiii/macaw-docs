@@ -139,13 +139,15 @@
 
 	<p class="wip">Not yet implemented</p>
 
-	<h2>Positioning (?)</h2>
+	<h2>Positioning</h2>
 
 	<h3>Positioning types</h3>
 
 	<p>Macaw supports three positioning types: static (default), absolute and fixed. For every element, you can pick which positioning should be used by Macaw.</p>
 
-	<p>To make it easier to identify element positions, element selection boxes, margin indicators and even part of UI that controls the position have colors based on selected element position type. Respective colors are:</p>
+	<p>To make it easier to identify element positions, element selection boxes, margin indicators and even part of UI that controls the position have colors based on selected element position type. This allows for easy inspection whenever you select an element.</p>
+
+	<p>Following colors are used for marking position type:</p>
 
 	<ul>
 		<li>Static - Blue,</li>
@@ -155,20 +157,29 @@
 
 	<img src="design-basics/img/position-static-absolute-fixed.png" alt="">
 
-	<p>Margin indicators (solid semi-transparent blocks) help to determine how an element will be placed on the canvas with relation to the surrounding elements</p>
-
-	<p>Static positioning is the default used by Macaw. Elements with static position are placed using their margin values relating to the canvas or other elements. If elements overlap - negative margins may be used.</p>
+	<p><strong>Static positioning</strong> is the default used by Macaw. Elements with static position are placed using their margin values relating to the canvas or other elements. If elements overlap - negative margins may be used.</p>
 
 	<p class="wip">When static positioning is set to a bunch of elements - they might move if you move the element that their margin relates to. (Really unsure if this is a bug or a feature - needs to be verified. Also might need an animation)</p>
 
-	<p>Absolute positioning allows the elements to be independent of other elements positions. It can also be used to position elements inside their parents.</p>
+	<p><strong>Absolute positioning</strong> allows the elements to be independent of other elements positions. It can also be used to position elements inside their parents.</p>
 
-	<p>Fixed positioning is useful for elements that have to be fixed (pinned) to the page and stay at their position even if the page is scrolled. This allows you to test their behavior during design phase, just like you would in the browser.</p>
+	<p><strong>Fixed positioning</strong> is useful for elements that have to be fixed (pinned) to the page and stay at their position even if the page is scrolled. This allows you to see their behavior during design phase, just like you would in the browser.</p>
 
-	<p class="wip">needs animation</p>
+	<p class="wip">needs animation on how pinning looks like in a design when scrolled</p>
 
 	<h3>Origins</h3>
+
+	Origins in Macaw define how an element is placed on the canvas in relation to other elements. It directly translates to how that element's margins are set. For statically positioned elements you have the option to set X origins, whereas absolutely and fixed positioned elements additionally allow you to set Y origins.
+
+	<p>X origin can be set to left, right or center. X center origin means that an element will be always centered inside it's parent, left and right origins will allow an element to be positioned relatively to the desired side of it's parent.</p>
+
+	<p>Y origin can be set to top, bottom or middle. Y middle origin means that an element will be always centered vertically inside it's parent. By combining X center and Y middle origins you can place an element exactly in the middle of it's parent. Top and bottom Y origins position the element in the desired distance either from top or bottom of it's container.</p>
+
+	<p>By using fixed positioning you can easily create <strong>sticky headers and footers</strong> just by adjusting elements position and setting Y origin to top or bottom.</p>
+
 	<h3>Margins</h3>
+
+	<p>Margin indicators (solid semi-transparent blocks) help to determine how an element will be placed on the canvas with relation to the surrounding elements</p>
 	<p class="wip">top position / margin, can be only set in px</p>
 
 
