@@ -185,13 +185,53 @@
 
 
 	<h2>Styling</h2>
-	<p class="wip">Mention predefined styles for elements?</p>
+
+	<p>Macaw allows you to apply various styles to your elements using the Inspector Pane, with all of the styles translating to appropriate CSS counterparts.</p>
+
+	<p>To set element's styles you need to have that element selected and pick desired styles from the Inspector Pane. Some styles (e.g. border &amp; border radius for standard elements and text styles for text elements) can be applied to multiple elements at the same time. To do that, just hold <strong>SHIFT</strong> and click on desired elements to select them all, then pick their common styles.</p>
+
+	<p>When you create new elements, by default they have some styles applied to them, to make it easier for you to work with them.</p>
+
+	<ul>
+		<li><strong>Element</strong> - elements have their background color set to gray: rgb(222, 222, 222).</li>
+		<li><strong>Text</strong> - font is set to black 16px Helvetica with 1.38em line height and a weight of 400. Paragraph spacing is set to 1em.</li>
+		<li><strong>Button</strong> - font is set to black 16px Helvetica with 1.38em line height and a weight of 400. Background color set to rgb(222, 222, 222), with a border radius of 3px.</li>
+		<li><strong>Input</strong> - font is set to black 13px Helvetica with 1.38em line height and a weight of 400. Background is set to a lighter gray rgb(242, 242, 242), with left and right paddings set to 10px.</li>
+		<li><strong>Text area</strong> - font is set to black 16px Helvetica with 1.38em line height and a weight of 400. Background is set to a lighter gray rgb(242, 242, 242), with all paddings set to 5px and a 1px gray rgb(119, 119, 119) border.</li>
+		<li><strong>Select</strong> - font is set to black 13px Helvetica with 1.38em line height and a weight of 400. Background is set to a lighter gray rgb(242, 242, 242), with left padding set to 10px, a 1px gray rgb(119, 119, 119) border and a border radius of 3px. Additionally this element has a SVG background (select-arrows.svg).</li>
+		<li><strong>Checkbox and Radio Button</strong> - font is set to black 16px Helvetica with 1.38em line height and a weight of 400.</li>
+	</ul>
 
 	<h3>Backgrounds</h3>
+
+	<p>Macaw allows for setting background colors, images and even setting a gradient background. One element can have multiple background images/gradients applied, that can be managed inside the <strong>Backgrounds</strong> section of Inspector pane.</p>
+
+	<p>Most of elements including the canvas (body) can have their backgrounds set.</p>
+
+	<h4>Background Color</h4>
+
+	<p>Background color can be set through the Background Color value field. Supported values are <strong>HEX</strong> e.g. #0064f0, <strong>RGB</strong> e.g. rgb(0, 100, 240) and <strong>HSL</strong> e.g. hsl(215, 100%, 47%). You can also put <strong>transparent</strong> inside that field and it will get transformed to rgba(0, 0, 0, 0), the same will happen if the value is deleted. Macaw also supports semi-transparent background colors, which can be entered as <strong>RGBA</strong> e.g. rgba(0, 99, 239, 0.52) and <strong>HSLA</strong> e.g. hsla(215, 100%, 47%, 0.52).</p>
+
+	<img src="design-basics/img/background-color-field.png" alt="Background Color Value Field">
+
+	<p>Background colors can be also chosen through the Color Picker dialog, by clicking on the color well near the background color value field. This will launch Macaw's Color Picker dialog in which you can adjust the color and set transparency as well as the type of the outputted value (HEX, RGB(A), HSL(A)).</p>
+
+	<img src="design-basics/img/color-picker-dialog.gif" alt="Color Picker Background Color Dialog">
+
+	<h4>Background Images</h4>
+
+
+
+	<h4>Gradient Backgrounds</h4>
+
 	<h3>Paddings</h3>
+
 	<h3>Border radius</h3>
+
 	<h3>Effects</h3>
+
 	<h3>Advanced style properties</h3>
+
 
 </body>
 </html>
