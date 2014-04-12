@@ -13,6 +13,7 @@ Getting started
 - workspace
     - tools
     - inspector
+    - color picker
     - pages
 
 Design basics
