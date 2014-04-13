@@ -1,0 +1,133 @@
+body {
+  background-color: #ffffff;
+  font: 300 0.875em/1.58 museo-sans;
+  color: #181818;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.071em;
+  font-weight: 500;
+}
+
+h2 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+h3 {
+  margin-top: 1.5em;
+  font-size: 1.143em;
+  font-weight: 500;
+}
+
+h4 {
+  margin-top: 1.5em;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+section {
+  padding-top: 160px;
+}
+
+.content {
+  float: left;
+  width: 57.5%;
+  max-width: 690px;
+  height: 763px;
+  margin-left: 25.5%;
+}
+
+.primary-nav {
+  position: fixed;
+  top: 170px;
+  left: 8.5%;
+  z-index: 7;
+  width: 15%;
+  height: 286px;
+  font-size: 1em;
+  color: rgb(141, 141, 141);
+}
+
+.primary-nav a {
+  display: block;
+  color: rgb(141, 141, 141);
+}
+
+.primary-nav a:hover {
+  color: rgb(0, 173, 255);
+}
+
+.primary-nav a.is-active {
+  color: rgb(237, 72, 119);
+}
+
+.wip {
+  background-color: rgba(255, 255, 0, .3);
+}
+
+strong {
+  font-weight: 500;
+}
+
+em {
+  font-style: italic;
+}
+
+.key {
+  padding: 2px 4px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, .07);
+  font-weight: 500;
+}
+
+.cmd {
+  border: 1px dotted rgba(0, 0, 0, 0.15);
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.btn {
+  padding: 2px 5px;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, .05);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+code {
+  font-family: Monaco, monospace;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 13px;
+}
+
+/* images */
+.img-navigator {
+  width: 505px;
+}
+
+.img-components {
+  width: 301px;
+}
+
+@media(max-width: 800px) {
+  .content {
+    clear: both;
+    width: 66%;
+    margin-left: 17%;
+  }
+
+  .primary-nav {
+    display: none;
+    position: static;
+    float: left;
+    margin-top: 25px;
+    margin-left: 17%;
+  }
+}

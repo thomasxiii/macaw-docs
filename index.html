@@ -1,0 +1,335 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0">
+  <title>Macaw Documentation</title>
+  <link rel="stylesheet" href="css/standardize.css">
+  <link rel="stylesheet" href="css/index.css">
+  <script type="text/javascript" src="http://use.typekit.net/vsp8met.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+</head>
+<body>
+
+  <nav class="primary-nav">
+    <a href="#drawing">Drawing</a>
+    <a href="#positioning">Positioning</a>
+    <a class="wip" href="#properties">Properties</a>
+    <a class="wip" href="#images">Images</a>
+    <a href="#canvas">Canvas</a>
+    <a href="#grid">Grid</a>
+    <a class="wip" href="#global-styles">Global Styles</a>
+    <a class="wip" href="#library">Library</a>
+    <a href="#components">Components</a>
+    <a class="wip" href="#outline">Outline</a>
+    <a class="wip" href="#pages">Pages</a>
+    <a class="wip" href="#interactivity">Interactivity</a>
+    <a class="wip" href="#publishing">Publishing</a>
+  </nav>
+
+  <article class="content">
+    <section id="drawing">
+      <h1>Drawing</h1>
+      <p>The primary way of creating elements in Macaw is drawing. Macaw allows you to draw numerous types of elements by simply <strong>clicking and dragging</strong> on the canvas.</p>
+
+      <h3>Units</h3>
+      <p>You can draw elements with percentage or pixel based widths and positions. The controls for these options appear in the property bar after selecting a drawing tool.</p>
+      <img src="design-basics/img/percentage-or-px-based-width-and-x.png" alt="">
+
+      <h3>Snap</h3>
+      <p>You can toggle Snap by selecting <strong class="cmd">View > Toggle Snap</strong> or pressing <strong class="key">Cmd+U</strong>. When enabled, your cursor will snap to the grid, canvas boundaries and other elements as you draw.</p>
+      <img src="design-basics/img/drawing-snapping.gif" alt="">
+
+      <h3>Drag Origin</h3>
+      <p>When drawing an element, hold <strong class="key">Option</strong> to change the element's origin instead of its size.</p>
+
+      <h2>Element Tool (R)</h2>
+      <p>The Element Tool is the most primitive of the drawing tools. It creates empty elements with no content. They can be useful for rapid prototyping or initial styling. However, it's recommended that these elements eventually be converted into containers.</p>
+
+      <h2>Container Tool (G)</h2>
+      <p>Containers are used for grouping elements. However, containers are not like groups in standard image editing software. They have their own dimensions and can be styled like other elements.</p>
+
+      <p>To create a container using the Container Tool, simple click and drag on the canvas. As the area of the container expands, it will highlight any elements it covers. Highlighted elements will be placed inside the newly drawn container.</p>
+
+      <p>You can also create containers by selecting an array of elements and using the <strong class="cmd">Elements > Group</strong> command or <strong class="key">Cmd-G</strong>. Groups created in this way will automatically set the group dimensions to fit the boundaries of the children.</p>
+
+      <p>Note: If the bottommost element being grouped surrounds all of the other elements, Macaw will ask if you would like to transfer presentation attributes to the new container. This will basically place everything inside the larger element. It is highly recommended that you do so as it typically results in cleaner and more semantic markup.</p>
+      <img src="design-basics/img/transfering-presentation-attributes.gif" alt="">
+
+      <h2>Text Tool (T)</h2>
+
+      <p>Macaw's canvas is actually a web browser, so it can render text exactly how it will appear on the web. It can also tie in to popular font services like Typekit.</p>
+
+      <h3>Paragraph and Point Text</h3>
+      <p>There are two types of text elements in Macaw: point text and paragraph text. Simply clicking on the canvas with the Text Tool, will create a Point Text field that has auto width and behaves like an inline element. Paragraph Text, which has set dimensions and behaves like a block level element, can be created by clicking and dragging on the canvas with the Text Tool.</p>
+
+      <p>You can toggle between the two types of text boxes, by changing the element's width suffix in the Dimensions Palette. Choosing <strong>Auto</strong> will set the element to Point Text, whereas <strong>px</strong> or <strong>%</strong> will set the element to Paragraph Text.</p>
+
+      <h3>Dimensions</h3>
+      <p>When a text element is selected, resize handles help you identify it's type and properties. If side handles are present, they indicate that an element's width is set in px or %. Top and bottom handles indicate that this text element has a height set in px or %. Lack of handles show that width or height is set to auto.</p>
+      <img src="design-basics/img/text-selection-boxes.png" alt="">
+
+      <h3>Paragraphs versus line breaks</h3>
+      <p>Hitting <strong class="key">Return</strong> to separate lines of text inside a text box will result in code output for that box being divided into several paragraphs. You can also use <strong class="key">Shift-Return</strong> to create line breaks (&lt;br&gt;) in the code output.</p>
+
+      <h3>Lorem Insertion</h3>
+      <p>Macaw supports <em>Lorem Ipsum</em> text generation, for quickly filling text elements with dummy text. Simply type <strong class="key">loremXY</strong> and press <strong class="key">TAB</strong>. In this shortcut, Y must be set to either 'w' for words, 's' for sentences or 'p' for paragraphs. X must be an integer indicating the number of Y to inser. For example, <strong class="key">lorem3p</strong> would insert three paragraphs and <strong class="key">lorem2s</strong> would insert two sentences.</p>
+      <img src="design-basics/img/lorem-generator.gif" alt="">
+
+      <h2>Input Tool (N)</h2>
+      <p>Text, email, password, number, search and url input elements can all be drawn using the Input Tool. By default, Macaw will draw a standard text input. You can change the input type using the Type dropdown in the inspector. Note: changing the input type is not immediately noticeable within Macaw. However, the type attribute will be set when published.</p>
+      <p>Input fields are text editable. Any text you put inside the element will be used as placeholder text when published.</p>
+
+      <h2>Button Tool (B)</h2>
+      <p>Buttons are similar to text elements, but they automatically center their text vertically. They also have a special property called "type" (editable in the advanced palette) which allows them to handle things like form submission.</p>
+      <p>Note: if using a button for a simple link, you may want to convert the button to an "a" tag. This can be done by renaming the element (<strong class="key">Cmd-R</strong>) to "a.button-name". This may cause some unwanted style changes, but will create a more standards-adherent link.</p>
+
+      <h2>Textarea (Shift-N)</h2>
+      <p>Textarea elements are much like input elements, but they allow for larger working areas. The textarea's name attribute and resize setting can be set in the inspector.</p>
+
+      <h2>Select (Shift-N)</h2>
+      <p>The select element is basically a dropdown. You can modify the available options for the select, using the list builder in the Inspector. You can add an option by clicking the <strong class="btn">+</strong> button. Double-clicking the option name allows you to edit the text. Click and drag an option to rearrange it and click the trash icon to delete it. Note: the first option will be used as the default.</p>
+      <img src="design-basics/img/select-options.gif" alt="">
+
+      <h2>Checkbox &amp; Radio (Shift-N)</h2>
+      <p>Checkbox and radio elements can be drawn by clicking and dragging on the canvas with their respective tools. Both elements have a minimum width of 66 px and minimum height of 22 px, that are applied when drawing, but can be adjusted later.</p>
+      <p>When a checkbox or radio element is added to the canvas, three elements are actually created: a checkbox or radio, a label and a container for them both.</p>
+      <img src="design-basics/img/radio-checkbox-structure.gif" alt="">
+    </section>
+
+    <section id="positioning">
+      <h1>Positioning</h1>
+
+      <p>Macaw allows three types of positioning: static (default), absolute and fixed. Each of these mechanisms has its own uses and limitations. Every element within Macaw can have its own type of positioning.</p>
+
+      <p>Positioning modes can be set using the three icons on the left of the property bar, which are visible when an element is selected. The wave icon is used for static, the crosshair is for absolute and the pin is for fixed positioning.</p>
+
+      <h2>Static</h2>
+      <p>Static is the default positioning mode of Macaw. Elements set to static are positioned in relation to the element that precedes it in the document. This can be somewhat confusing to someone unfamiliar with web development, however it's very important to wrap your head around as most of the web is constructed using these mechanics.</p>
+
+      <p>Margins are the properties used to set the distance between an element and the one before it. When dragging and element arund the canvas, Macaw will automatically calculate the margins necessary to position the element. You can also use the margin controls in the property bar for fine-tuning.</p>
+
+      <p>Note: Elements using static positioning are essentially chained together. Therefore, modifying properties of one element may affect the positioning of other elements.</p>
+
+      <h2>Absolute</h2>
+      <p>Absolute positioning allows elements to be placed at a specific coordinate, which is relative to its parent's coordinates. Elements set to absolute are not in the document flow and, therefore, do not affect the position of the elements around it.</p>
+
+      <h2>Fixed</h2>
+      <p>Fixed positioning is similar to absolute positioning except that the coordinates set for fixed elements are relative to the viewport instead of the element's parent. So, elements with fixed positioning will stay in place as the document is scrolled.</p>
+      <img src="design-basics/img/position-static-absolute-fixed.png" alt="">
+
+      <h2>Origins</h2>
+      <p>Origins define the direction in which an element is positioned. The options are fairly self-explanatory, but they translate to different properties based on the positioning mode.</p>
+
+      <p>Elements with static positioning allow x-origins to be changed to left, right or center. Left origins will use margin-left to position an element. Right origins will float an element to the right and utilize margin-right for positioning. Center origins will force an element to center using <code>auto</code> for <code>margin-left</code> and <code>margin-right</code>.</p>
+
+      <p>Elements with absolute or fixed positioning have x and y origin controls. Left and right x-origins will publish as left and right properties. Center x-origins will publish as <code>left: 0; right: 0; margin-top: auto; margin-bottom: auto;</code>. Y-origins will use top and bottom properties and center y-origins will publish as <code>top: 0; bottom: 0; margin-top: auto; margin-botton: auto;</code>.</p>
+
+      <h2>Guides</h2>
+      <p>Macaw provides on-canvas positioning guides to help you position an element precisely how you want it. Positioning guides change color to identify the positioning mode used: blue is for static, orange is for absolute and green is for fixed.</p>
+
+      <p>Positioning guides appear when dragging or selecting an element. If they do not appear, they may have been toggled off. They can be toggled back on using <strong class="cmd">View > Toggle Positioning Guides</strong> or <strong class="key">Cmd-'</strong>.</p>
+    </section>
+
+    <section id="properties">
+      <h1>Properties</h1>
+
+      <h2>Backgrounds</h2>
+      <p>Macaw allows you to add both image and gradient backgrounds to elements and the canvas. You can add as many backgrounds as you like.</p>
+
+      <h3>Adding</h3>
+      <p>To add a background, click the <strong class="btn">+</strong> button in the Backgrounds Palette and select the type of background you wish to add.</p>
+
+      <h3>Deleting</h3>
+      <p>To delete a background click on the trashcan button or right-click on the background and select <strong class="cmd">Delete</strong>.</p>
+
+      <h3>Images</h3>
+      <p>Within the image background dialog you can select to import a new image to use for your background or you can pick an existing image from your library.
+
+      <h3>Gradient</h3>
+      <p>To edit a background, double click on the background you wish to edit in the inspector or right-click and select <strong class="cmd">Edit</strong>.</p>
+  
+
+      Shadows:
+    - Adding shadows
+      - Within Macaw you can add drop, inner and text shadows to your elements. To add a shadow select the element you wish to add the shadow to and click the add shadow button. Select the type of shadow you wish to add from the menu.
+    - Editing shadows
+      - To edit a shadow just double click on corresponding shadow layer in the inspector or right click on it and select "Edit".
+    - Deleting shadows
+      - To delete a shadow you can click the shadows trashcan icon or you can right click and select the "Delete" option.
+
+        - Styling Text
+      - To style your text select the text elements you wish to update and use the text formatting palette in the inspector. All the CSS properties regarding text can be updated for reach text element.
+      ** Note: Text styles can only be applied to the entire text element at this time.
+    - Type Stats
+      - Macaw helps designers keep track of pesky little character counts and characters per line right in the interface. Simply select a text element to see its stats.
+    - Adding Typekit Fonts
+      - Macaw allows you to easily pull in your favorite Typekit fonts directly in the interface. To include Typekit fonts in your project open the font family dropdown and click the "Add Fonts" text. In the dialog that opens type in your a Typekit kit ID. Once entered Macaw will notify you if the import worked. Your Typekit fonts will now be included in the font dropdown. They will be labeled with a Typekit logo next to each one.
+      - Important: To enable Macaw access to your Typekit kit you will need to add 'localhost' as an allowed domain. This can be done on the Typekit website.
+    - Using System Fonts
+      - Macaw allows you to use all of your system fonts in your designs. By default they are hidden in the font family dropdown. To enable system fonts open the font family dropdown and click the "Show System Fonts" text in the top right. This will load in and include all your system fonts in the font list.
+      - Important: System fonts will only work when editing and viewing your design locally. They will not work when uploaded to a server unless the necessary steps are taken.
+
+
+
+
+LINKS
+      <p>If you attach a URL to a button using Link field inside Inspector Pane, the button will redirect to that URL through an <strong>onClick</strong> JavaScript event. To change the button to a standard link, change the button tag name inside Inspector Pane to <strong>a</strong>, it will be then converted to a plain <strong>&lt;a&gt;</strong> tag in the output.</p>
+
+    </section>
+
+    <section id="images">
+      Images:
+  - Adding Images
+    - Images can be added to your project in two ways. The first is to import the image into your project. This can be done by going to File > Import Images (Mac Shift+⌘+I, PC Ctrl+Shift+I) or File > Import to Canvas (Mac ⌘+I, PC Ctrl+I). The first options will import the images into your library. The second imports the images into your library and also adds them to the current page.
+    - An alternative way to import images is to drag images from a folder on your computer into Macaw. When this happens you will see the application screen say "Drop to Import". When dropped the image will be added to your library and add to the canvas.
+  - Editing Images
+    - Images can be resized just like all other elements via the transform handles. In Macaw all elements keep thier width/height proportions. To change an image's proportions see "Cropping Images".
+  - Reseting Images
+    - Sometimes you might want to reset an image to its default width, height, etc. This can be done by clicking the "Reset" button that is visible in the image palette. This button will only display for images that have changes.
+  - Retina Images
+    - Images can be adjusted for retina by clicking the "@2x" button. This will update adjust the images width and height to take into account retina displays.
+    - When working with a retina display images will automatically be imported with the "@2x" setting enabled.
+  - Cropping Images
+    - Description
+      - Macaw allows you to dynamically crop image instances in your designs. These edits can also be different per breakpoint.
+    - Enabling Image Cropping
+      - By default image cropping is disabled in projects. To enable image cropping open the "Publish Settings" dialog, navigate to the Images section and enable the "Generate Optimized Images" setting. 
+      - Image cropping can also be enabled by double clicking on an image. Macaw will prompt you and ask if you would like to enable image editing.
+    - Cropping an image
+      - To crop an image double click on the image. This will enter image crop mode. In this view additional transform handles will become available.
+      - Use the frame handles to adjust the images frame dimensions. This allows you to adjust the images width and height independantly.
+      - The image inside the frame can also be scaled and dragged to create the image that best fits your design.
+  - Responsive Images
+    - Image cropping can be done per breakpoint.
+  - Images and Publishing
+    - When "Generate Optimized Images" are enabled and cropped images exist in the project Macaw will perform a few extra actions on publish.
+    - First it will generate a new image for each image that has unique cropped settings.
+    - Second it will add the rimages.js library to your publish HTML. This Javascript library handles the toggling of the cropped images across your breakpoints. It will swap out images so that the correct image is displayed at each breakpoint.
+
+  Import to Library:
+    - @library @images
+    - In order to use images in your Macaw project you first will need to import them into your project's library. This can be done by going to File > Import to Library (Mac Shift+⌘+I, PC Ctrl+Shift+I). You can import multiple images simulataneously by selecting multiple files in the dialog.
+    - After import images will appear in your Library and can be added to any page in your project by dragging them on to the canvas. [See Dragging into App]
+
+  Import to canvas:
+    - @library @images
+    - Images can be imported directly onto the canvas by going to File > Import to Canvas (Mac ⌘+I, PC Ctrl+I). When an image is imported to the canvas it is first added to your projects library and then the image is placed at the center of the canvas. 
+    ** Note: Images can only be imported to the canvas at the default breakpoint of your project. 
+    
+  Dragging into App:
+    - @library @images
+    - Simply dragging an image from your project's library onto the canvas will add that image to the current page.
+  Image Palette:
+    - @inspector @images
+    - The image palette contains all information for your images regarding current and original dimenstions, filename and retina settings. It displays when you have a single image selected.
+    - (Image would help) 
+      - Original image dimensions
+        - The dimensions of the image on the file system.
+      - Current image dimensions (See image editing)
+        - The current dimensions of the image on the page.
+      - Current inner image dimensions (See image editing)
+        - The current dimensions of the image inside the frame. (See image editing)
+      - Original filename
+        - The filename of the image. This is the name the image has in your library.
+      - @2x Retina button
+        - Toggles the image for retina. When on it halves the width and height.
+  Resizing:
+    - Resizing images acts slightly different than other elements. Images by default preserve thier width/height proportions on resize. Whenever an images width is adjusted via the transform drag handles or the width input in the inspector the height will adjust automatically.
+    - In the event the width or height need to be updated independently then the image cropping feature should be used.
+  Cropping:
+    - Images can be cropped and edited on an image by image basis.
+    - Image cropping allows users to crop an individual image. This means you can adjust the width and height of the image as well what portions of the image are within that frame. By default when an image is edited Macaw will generate a new image at the correctly dimensions on publish.
+    - Image cropping is off by default in all projects. It can be enabled one of two ways.
+      - Via the Publish Settings Dialog, Images sections. Check the "Generate Optimized Images".
+      - It can also be enabled by double clicking on an image. A dialog will show asking if you would like to enable "Optimized Images".
+    </section>
+
+    <section id="canvas">
+      <h1>Canvas</h1>
+      <p>The canvas in Macaw is not a fixed size like in other image editors. It's fluid like a browser window and can be resized at any moment using the resize handle located on the right side of the canvas. This allows you to see how your design behaves at different viewport widths. The height of the canvas is also dynamic. It grows as you add elements to the page – always giving you room to work.</p>
+
+      <h2>Scrolling</h2>
+      <p>Horizontal scrolling move the entire viewport left or right for easier manipulation of elements. Scrolling the canvas vertically, however, scrolls the content of the viewport. This allows you to see the effects of fixed positioning.</p>
+
+      <h2>Hand Tool (H)</h2>
+      <p>In addition to scrolling the canvas, you can use the Hand Tool to grab and drag it. When using the Hand Tool, a navigator thumbnail will appear in the upper-right corner of the viewport to show the currently visible area. Click anywhere on the navigator to jump to a section in your document.</p>
+      <img src="images/navigator.gif" class="img-navigator">
+
+      <h2>Adding Breakpoints</h2>
+      <p>You can click and drag the resize handle on the right side of the canvas to watch your designs flow at different viewport sizes. While dragging, a tooltip will appear above the handle to indicate the current width of the canvas. Pressing <strong class="key">Cmd</strong> while dragging allows you to insert a breakpoint at the current width. Breakpoints can also be added using the "+" button in the Breakpoints Palette.</p>
+
+      <h2>Changing Breakpoints</h2>
+      <p>You can quickly jump to a viewport size by clicking the appropriate link in the Breakpoints Palette. There are also some useful keyboard shortcuts: <strong class="key">Cmd-[</strong> will move down one breakpoint, <strong class="key">Cmd-]</strong> will move up one breakpoint and <strong class="key">Cmd-\</strong> will toggle between the current breakpoint and the default breakpoint.</p>
+    </section>
+
+    <section id="grid">
+      <h1>The Grid</h1>
+
+      <p>The grid is an essential part of Macaw's workspace and design workflow. It helps place elements evenly on the page and serves as a guide throughout the design process. The Grid Palette allows you to set the grid to match your preferences. Note: grid settings can be changed per breakpoint.</p>
+
+      <h3>Grid Width</h3>
+      <p>This sets the width of the entire grid. It can be set in either pixels or percentages to create static or fluid grids.</p>
+
+      <h3>Columns</h3>
+      <p>This is the total number of columns in your grid. The widths of the columns will be automatically calculated.</p>
+
+      <h3>Gutter</h3>
+      <p>This is the space between grid columns. It is always set in percentages.</p>
+      <img src="design-basics/img/grid-setting-up.gif" alt="">
+    </section>
+
+    <section id="components">
+      <h1>Components</h1>
+      <p>Components are structured groups of elements that can be reused throughout your project. They live in the Library of your project and can be retrieved there on any page.</p>
+
+      <h2>Creating Components</h2>
+      <p>o create a component, select the elements that will make up the component and use the command <strong class="cmd">Element > Create Component</strong> or <strong class="key">⌘+K / Ctrl+K</strong>. You will be asked to name the new component after which the component will become available in your library. You can then create a new instance of the component by dragging it from the library to the canvas.</p>
+
+      <p>Note: The name you give Macaw will be used only for reference within the library. It will not affect the markup in any way.</p>
+      <img src="images/components.gif" class="img-components">
+    </section>
+
+    <section id="global-styles">
+      Global styles:
+  - Definition
+    - Global styles are a defined set of properties that can be applied to multiple elements at a time. Any change to a global style will automatically update all elements that haven't overwritten that changing property.
+  - Creating a Global Style
+    - To create a global style you can use Quick Styles tool.
+    - Open up the tool and click the Add(+) button.
+    - The style dialog will open
+      - Here you can add a style name and add all properties that you want to include in that style.
+    - You can create a global style based off of an element by selecting the element and clicking the add style button. This will copy all the display properties from the element to the global style.
+  - Deleting a Global Style
+    - To delete a global style open the Quick Styles tool and right click on the style you wish to delete and hit "Delete Style". This will delete the style and break all element references it has.
+  - Apply/Removing Styles to Elements
+    - Applying
+      - To add a style select the elements you want to add the style to and click the + icon next to the style name.
+      - When a style is added it will apply all of the properties that make up that style to the element. Overwriting any values that the elements have.
+    - Removing
+      - To remove a style select the elements you want to remove the style from and click the styles corresponding "x" button. This will break the link between the style and elements. The elements properties will not be updated in anyway. on remove.
+  - Modifying
+    - To modify a style open the Quick Styles Tool and double click on the style you wish to update.
+      - The style dialog will open and you will be able to make changes to that style.
+    - Updates all elements with that property applied
+    - Only updates properties that are the same.
+
+    </section>
+
+    <section id="pages">
+      Pages:
+  - Adding Pages
+    - Macaw allows you to have mutlple pages in one project. To add a page, open the page menu and click the new page button (icon). You can also create a new page by going to File > New Page (Mac ⌘+N, PC Ctrl+N). The app will ask you to provide a name for the new page and then add it to your project.
+  - Duplicating Pages
+    - Pages can be duplicated using the page menu. In the page menu click on a page's duplicate button (icon) to copy the page and all its elements. The new page will have the same name as the original with "copy" appended.
+  - Deleting Pages
+    - To delete a open the page menu and click the delete button (icon) next to the page that should be deleted.
+  - Page Properties
+    - Page titles can be set via the page title palette in the inspector. This is visible when no elements are selected.
+  - Publishing
+    </section>
+
+  </article>
+
+</body>
+</html>
