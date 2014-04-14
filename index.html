@@ -15,10 +15,10 @@
     <a href="#drawing">Drawing</a>
     <a href="#positioning">Positioning</a>
     <a class="wip" href="#properties">Properties</a>
-    <a class="wip" href="#images">Images</a>
+    <a href="#images">Images</a>
     <a href="#canvas">Canvas</a>
     <a href="#grid">Grid</a>
-    <a class="wip" href="#global-styles">Global Styles</a>
+    <a href="#global-styles">Global Styles</a>
     <a class="wip" href="#library">Library</a>
     <a href="#components">Components</a>
     <a class="wip" href="#outline">Outline</a>
@@ -179,70 +179,69 @@ LINKS
     </section>
 
     <section id="images">
-      Images:
-  - Adding Images
-    - Images can be added to your project in two ways. The first is to import the image into your project. This can be done by going to File > Import Images (Mac Shift+⌘+I, PC Ctrl+Shift+I) or File > Import to Canvas (Mac ⌘+I, PC Ctrl+I). The first options will import the images into your library. The second imports the images into your library and also adds them to the current page.
-    - An alternative way to import images is to drag images from a folder on your computer into Macaw. When this happens you will see the application screen say "Drop to Import". When dropped the image will be added to your library and add to the canvas.
-  - Editing Images
-    - Images can be resized just like all other elements via the transform handles. In Macaw all elements keep thier width/height proportions. To change an image's proportions see "Cropping Images".
-  - Reseting Images
-    - Sometimes you might want to reset an image to its default width, height, etc. This can be done by clicking the "Reset" button that is visible in the image palette. This button will only display for images that have changes.
-  - Retina Images
-    - Images can be adjusted for retina by clicking the "@2x" button. This will update adjust the images width and height to take into account retina displays.
-    - When working with a retina display images will automatically be imported with the "@2x" setting enabled.
-  - Cropping Images
-    - Description
-      - Macaw allows you to dynamically crop image instances in your designs. These edits can also be different per breakpoint.
-    - Enabling Image Cropping
-      - By default image cropping is disabled in projects. To enable image cropping open the "Publish Settings" dialog, navigate to the Images section and enable the "Generate Optimized Images" setting. 
-      - Image cropping can also be enabled by double clicking on an image. Macaw will prompt you and ask if you would like to enable image editing.
-    - Cropping an image
-      - To crop an image double click on the image. This will enter image crop mode. In this view additional transform handles will become available.
-      - Use the frame handles to adjust the images frame dimensions. This allows you to adjust the images width and height independantly.
-      - The image inside the frame can also be scaled and dragged to create the image that best fits your design.
-  - Responsive Images
-    - Image cropping can be done per breakpoint.
-  - Images and Publishing
-    - When "Generate Optimized Images" are enabled and cropped images exist in the project Macaw will perform a few extra actions on publish.
-    - First it will generate a new image for each image that has unique cropped settings.
-    - Second it will add the rimages.js library to your publish HTML. This Javascript library handles the toggling of the cropped images across your breakpoints. It will swap out images so that the correct image is displayed at each breakpoint.
+      <h1>Images</h1>
 
-  Import to Library:
-    - @library @images
-    - In order to use images in your Macaw project you first will need to import them into your project's library. This can be done by going to File > Import to Library (Mac Shift+⌘+I, PC Ctrl+Shift+I). You can import multiple images simulataneously by selecting multiple files in the dialog.
-    - After import images will appear in your Library and can be added to any page in your project by dragging them on to the canvas. [See Dragging into App]
+      <h2>Adding Images</h2>
+      <p>Images can be added to your project in three ways. Import to library, import to canvas and dragging images into Macaw.</p>
 
-  Import to canvas:
-    - @library @images
-    - Images can be imported directly onto the canvas by going to File > Import to Canvas (Mac ⌘+I, PC Ctrl+I). When an image is imported to the canvas it is first added to your projects library and then the image is placed at the center of the canvas. 
-    ** Note: Images can only be imported to the canvas at the default breakpoint of your project. 
-    
-  Dragging into App:
-    - @library @images
-    - Simply dragging an image from your project's library onto the canvas will add that image to the current page.
-  Image Palette:
-    - @inspector @images
-    - The image palette contains all information for your images regarding current and original dimenstions, filename and retina settings. It displays when you have a single image selected.
-    - (Image would help) 
-      - Original image dimensions
-        - The dimensions of the image on the file system.
-      - Current image dimensions (See image editing)
-        - The current dimensions of the image on the page.
-      - Current inner image dimensions (See image editing)
-        - The current dimensions of the image inside the frame. (See image editing)
-      - Original filename
-        - The filename of the image. This is the name the image has in your library.
-      - @2x Retina button
-        - Toggles the image for retina. When on it halves the width and height.
-  Resizing:
-    - Resizing images acts slightly different than other elements. Images by default preserve thier width/height proportions on resize. Whenever an images width is adjusted via the transform drag handles or the width input in the inspector the height will adjust automatically.
-    - In the event the width or height need to be updated independently then the image cropping feature should be used.
-  Cropping:
-    - Images can be cropped and edited on an image by image basis.
-    - Image cropping allows users to crop an individual image. This means you can adjust the width and height of the image as well what portions of the image are within that frame. By default when an image is edited Macaw will generate a new image at the correctly dimensions on publish.
-    - Image cropping is off by default in all projects. It can be enabled one of two ways.
-      - Via the Publish Settings Dialog, Images sections. Check the "Generate Optimized Images".
-      - It can also be enabled by double clicking on an image. A dialog will show asking if you would like to enable "Optimized Images".
+      <h3>Import to Library</h3>
+      <p>Importing images to your library allows you to move images into your Macaw project for later use. Once images are imported into your library you can drag them onto the canvas.</p>
+      <p>To import images to your library you can go to <strong class="key">File > Import to Library</strong> or use the keyboard shortcut <strong class="key">Shift+⌘+I (Mac)</strong> / <strong class="key">Ctrl+Shift+I (Windows)</strong>. Multiple images can be imported simultaneously.</p>
+
+      <h3>Import to Canvas</h3>
+      <p>Import to canvas performs the same way as "Import to Library" but in addition to adding all the images to your library they will also be added to the canvas.</p>
+      <p>To import to canvas you can go to <strong class="key">File > Import to Canvas</strong> or use the keyboard shortcut <strong class="key">⌘+I (Mac)</strong> / <strong class="key">Ctrl+I (Windows)</strong>. Multiple images can be imported simultaneously.</p>
+
+      <h3>Drag Import</h3>
+      <p>Images can also be imported directly to the canvas by dragging files from a folder outside of Macaw onto the canvas. This performs like "Import to Canvas" where all images will be both added to your library and to the current canvas.</p>
+
+      <h2>Scaling Images</h2>
+      <p>Images by default will always have a height of "auto" and will preserve their proportions on transform or width change. To change an images width and height independently see "Cropping Images" below.</p>
+
+      <h2>Retina Images</h2>
+      <o>Macaw makes toggling images to retina dimensions with a single button click. Any image can be toggled using the <strong class="btn">@2x</strong> button in the images palette.</p>
+      <p>Note: On retina enabled devices, images on the canvas and images used for backgrounds will be imported with the <strong class="btn">@2x</strong> enabled by default.</p>
+      <img src="images/images-retina.png" class="img-images-retina">
+
+      <h2>Generating Optimized Images</h2>
+      <p>Macaw makes available the ability to generate optimized images. What this does is on project publish Macaw will analyze all the images in your project and generate new images based on their dimensions. It will also generate regular and @2x retina images as well. The benefit of this is to ensure that your finished project will not contain unnecessarily large images. Instead it will have images at exactly the size it needs so that you site will download as quick as possible.</p>
+
+      <p>"Generate Optimized Images" can be enabled in the "Publish Settings" dialog under the "Images" section.</p>
+      <img src="images/images-generate.png" class="img-images-generate">
+
+      <h2>Cropping Images</h2>
+      <p>Macaw allows you to crop individual instances of images. This allows you to dynamically generate differently proportioned images from a single image inside your project. Images can also be cropped per breakpoint.</p>
+      <p>Note: To be able to crop images in your project you must enable "Generate Optimized Images" your project's publish settings under the "Images" section. It can also be enabled by double clicking on an image. Macaw will prompt you and ask if you would like to enable it.</p>
+
+      <h3>Perform Image Crop</h3>
+      <p>To begin cropping an image element double click it on the canvas. This will enter image crop mode and additional transform handles will become available. Within crop mode you can scale the image inside it frame using the transform handles at each corner of the image, you can drag the image to move the image inside its frame (as long as the frame is smaller than the image's dimensions) and you can scale the frames width and height using the frame handles at the top, right, bottom and left sides of the frame. Images can be cropped multiple times. In the event you want to reset an image crop to the original image use the image <strong class="btn">Reset</strong> button. See "Resetting Images" below.</p>
+
+      <h3>Committing Image Crop</h3>
+      <p>Once an image has been cropped to the desire dimensions you can leave image crop mode by double clicking anywhere outside of the image. This will apply the changes that were made and the new updated image will be generated.</p>
+
+      <h3>Cancel Image Crop</h3>
+      <p>Anytime during image cropping all changes can be reverted by hitting <strong class="key">ESC</strong>. This will rollback the image to what it was when image crop started and exit image crop mode.</p>
+
+      <p>Example:</p>
+
+      <p>Image before crop</p>
+      <img src="images/images-crop-before.png" class="img-images-crop-before">
+
+      <p>Image crop mode enabled.</p>
+      <img src="images/images-crop-start.png" class="img-images-crop-start">
+
+      <p>Image scale, position and frame adjusted.</p>
+      <img src="images/images-crop-edit.png" class="img-images-crop-edit">
+
+      <p>Finished image after crop.</p>
+      <img src="images/images-crop-done.png" class="img-images-crop-done">
+
+      <h2>Resetting Images</h2>
+      <p>Any images that have been scaled, toggled to retina or cropped can be reset at any time to their original settings using the <strong class="btn">Reset</strong> button in the image palette. This reset will only affect the image's settings at the current breakpoint.</p>
+      <img src="images/images-reset.png" class="img-images-reset">
+
+      <h2>Responsive Images</h2>
+      <p>By default images can be scaled and toggled to retina per breakpoint. When "Generate Optimized Images" is enabled images can also be cropped per breakpoint. Each of these topics have been discussed up above. When "Generate Optimized Images" is toggled on Macaw will include the "rimages.js" file with your published project files in the js folder. This library handles the swapping out of images both for retina and across breakpoints. All of the image's settings for this library are applied to the images tag via data attributes.</p>
     </section>
 
     <section id="canvas">
@@ -291,7 +290,7 @@ LINKS
     </section>
 
     <section id="global-styles">
-      <h1>Global styles:</h1>
+      <h1>Global Styles</h1>
       <p>Global styles are a defined set of properties that can be applied to multiple elements at a time. A single element can also have multiple styles applied to it. Any change to a global style will automatically update all elements that haven't overwritten that changing property.</p>
 
       <p>Global styles are managed via the "Quick Styles" tool which is located in the bottom left corner of the main application window.</p>
@@ -301,11 +300,11 @@ LINKS
       <img src="images/quick-styles-display.png" class="img-quick-styles-display">
 
       <h2>Creating a Global Style</h2>
-      <p>To create a global style open the Quick Styles tool and click the grey "+" button. The style dialog will open. Inside the style dialog you can set the style's name, see how many elements it is applied to and edit it's properties. By default all properties are toggled off and greyed out. To add properties to the style click the circle next to each property. Once toggled on, property inputs will become enabled.</p>
+      <p>To create a global style open the Quick Styles tool and click the grey <strong class="btn">+</strong> button. The style dialog will open. Inside the style dialog you can set the style's name, see how many elements it is applied to and edit it's properties. By default all properties are toggled off and greyed out. To add properties to the style click the circle next to each property. Once toggled on, property inputs will become enabled.</p>
       <img src="images/global-style-property.png" class="img-global-style-property">
 
       <h2>Creating a Global Style from an Element</h2>
-      <p>Global styles can be created from an existing element in your project. To do this simply select the element on the canvas and then create a style like normal using the grey "+" button in the Quick Styles tool. When you create a style from an element the style will be pre-populated with all the visual properties on that element. Properties can still be toggled on/off.</p>
+      <p>Global styles can be created from an existing element in your project. To do this simply select the element on the canvas and then create a style like normal using the grey <strong class="btn">+</strong> button in the Quick Styles tool. When you create a style from an element the style will be pre-populated with all the visual properties on that element. Properties can still be toggled on/off.</p>
       <p><strong>Note: When a global style is created from an element the style will be automatically applied to the originating element.</strong></p>
 
       <h2>Deleting a Global Style</h2>
@@ -313,11 +312,11 @@ LINKS
       <img src="images/quick-styles-delete.png" class="img-quick-styles-delete">
 
       <h2>Applying Styles to Elements</h2>
-      <p>To add a style to an element select the elements you want to add the style to and click the "+" icon to the left of the style name in the Quick Styles tool.</p>
+      <p>To add a style to an element select the elements you want to add the style to and click the <strong class="btn">+</strong> icon to the left of the style name in the Quick Styles tool.</p>
       <p>When a style is added it will apply all of the properties that make up that style to the element. Overwriting any values that the elements have.</p>
 
       <h2>Removing Styles from Elements</h2>
-      <p>To remove a style select the elements you want to remove the style from and click the styles corresponding "x" button. This will break the link between the style and elements.</p>
+      <p>To remove a style select the elements you want to remove the style from and click the styles corresponding <strong class="btn">x</strong> button. This will break the link between the style and elements.</p>
       <p><strong>Note: When a style is removed from an element only the reference between the style and the element is removed. The element's visual properties will stay exactly the same.</strong></p>
 
       <h2>Modifying Styles</h2>
@@ -328,6 +327,25 @@ LINKS
       <p>Sometimes a global style and an element may fall out of sync. This occurs when the style's properties do not match the elements properties one-to-one. Out of sync styles are displayed in the Quick Styles tool with the words "(modified)" next to them when you have elements selected.</p>
       <img src="images/quick-styles-modified.png" class="img-quick-styles-modified">
       <p>In the event you want to fully re-apply a global style's properties onto an element you can hit the refresh button (circular arrow) next to the style's name. This is apply all the styles properties to the selected elements overwriting all values on the elements.</p>
+    </section>
+
+    <section id="library">
+      <h1>Library</h1>
+      <p>The library contains all assets and components in your Macaw project. It can be displayed by clicking the <strong class="btn">Library</strong> button in the top right section of the application.</p>
+
+      <p>The library interface has a preview area that will display the current selected item, an import button for importing images (See "Images" section up above), a search bar for quickly finding items in your project and the item list. The item list is seperated into two groups. "Components" and "Project". The "Components" folder contains all components created within the project. The "Project" folder contains all the images that have been imported into your project.</p>
+      <img src="images/library-interface.png" class="img-library-interface">
+
+      <h2>Previewing Items in Library</h2>
+      <p>To Preview any item in the library click on the item to select it. On selection the preview window at the top of the library will display what the item looks like. This works for both components and images.</p>
+
+      <h2>Placing Library Items on the Canvas</h2>
+      <p>Any item in your project's library can be added in the canvas by dragging the item from the library list, moving it onto the canvas where you want it and releasing your mouse button. On drag a preview box will be displayed showing you the dimensions of the item you are placing. The newly placed item will be added on the canvas and placed inside any container that currently has focus. See "Diving into Containers" for more info.</p>
+
+      <h2>Deleting Items</h2>
+      <p>Library items can be removed at any time by clicking on the <strong class="btn">Trashcan</strong> icon for any item. On click you will be prompted to confirm that you would like to delete the selected item. IMPORTANT: This action cannot be undone. Tread carefully.</p>
+      <img src="images/library-delete.png" class="img-library-delete">
+
     </section>
 
     <section id="pages">
