@@ -15,14 +15,18 @@
     <a href="#drawing">Drawing</a>
     <a href="#positioning">Positioning</a>
     <a class="wip" href="#properties">Properties</a>
+    <a href="#text">Text</a>
+    <a href="#fonts">Fonts</a>
     <a href="#images">Images</a>
     <a href="#canvas">Canvas</a>
+    <a class="wip" href="#transforming">Transforming</a>
+    <a class="wip" href="#diving-containers">Diving into Containers</a>
     <a href="#grid">Grid</a>
     <a href="#global-styles">Global Styles</a>
-    <a class="wip" href="#library">Library</a>
+    <a href="#library">Library</a>
     <a href="#components">Components</a>
     <a class="wip" href="#outline">Outline</a>
-    <a class="wip" href="#pages">Pages</a>
+    <a href="#pages">Pages</a>
     <a class="wip" href="#interactivity">Interactivity</a>
     <a class="wip" href="#publishing">Publishing</a>
   </nav>
@@ -135,7 +139,7 @@
       <h1>Properties</h1>
 
       <h2>Backgrounds</h2>
-      <p>Macaw allows you to add both image and gradient backgrounds to elements and the canvas. You can add as many backgrounds as you like.</p>
+      <p>Macaw allows you to add both image and gradient backgrounds to elements and the canvas. You can add as many backgrounds as you like. Backgrounds can also be changed per breakpoint.</p>
 
       <h3>Adding</h3>
       <p>To add a background, click the <strong class="btn">+</strong> button in the Backgrounds Palette and select the type of background you wish to add.</p>
@@ -143,20 +147,40 @@
       <h3>Deleting</h3>
       <p>To delete a background click on the trashcan button or right-click on the background and select <strong class="cmd">Delete</strong>.</p>
 
-      <h3>Images</h3>
-      <p>Within the image background dialog you can select to import a new image to use for your background or you can pick an existing image from your library.
+      <h3>Ordering</h3>
+      <p>The background palette allows for drag and drop of backgrounds to set the order that they will render on your elements.</p>
 
-      <h3>Gradient</h3>
+      <h3>Editing</h3>
       <p>To edit a background, double click on the background you wish to edit in the inspector or right-click and select <strong class="cmd">Edit</strong>.</p>
-  
 
-      Shadows:
-    - Adding shadows
-      - Within Macaw you can add drop, inner and text shadows to your elements. To add a shadow select the element you wish to add the shadow to and click the add shadow button. Select the type of shadow you wish to add from the menu.
-    - Editing shadows
-      - To edit a shadow just double click on corresponding shadow layer in the inspector or right click on it and select "Edit".
-    - Deleting shadows
-      - To delete a shadow you can click the shadows trashcan icon or you can right click and select the "Delete" option.
+      <h3>Toggling Visibility</h3>
+      <p>Individual backgrounds can be toggled on/off using the eye (icon) for a background. If a background is toggled off it will not be added to the element both in Macaw and on publish. Visibility can be set per breakpoint.</p>
+
+      <h3>Images</h3>
+      <p>Within the image background dialog you can select to import a new image to use for your background or you can pick an existing image from your library. Background images can be scaled for retina using the <strong class="btn">@2x</strong>.</p>
+
+      <h3>Gradients</h3>
+      <p>Background gradients allow you to set the gradients colors, direction, size and repeats.</p>
+
+      <h2>Shadows</h2>
+      <p>Macaw allows you to add drop, inner and text shadows to elements on the canvas. Multiple shadows can be added to a single element and shadows can be changed per breakpoint.</p>
+
+      <h3>Adding</h3>
+      <p>To add a shadow, click the <strong class="btn">+</strong> button in the Shadows Palette and select the type of shadow you wish to add.</p>
+
+      <h3>Deleting</h3>
+      <p>To delete a shadow click on the trashcan button or right-click on the shadow and select <strong class="cmd">Delete</strong>.</p>
+
+      <h3>Ordering</h3>
+      <p>The shadow palette allows for drag and drop of shadows to set the order that they will render on your elements.</p>
+
+      <h3>Editing</h3>
+      <p>To edit a shadow, double click on the shadow you wish to edit in the inspector or right-click and select <strong class="cmd">Edit</strong>.</p>
+
+      <h3>Toggling Visibility</h3>
+      <p>Individual shadows can be toggled on/off using the eye (icon) for a shadow. If a shadow is toggled off it will not be added to the element both in Macaw and on publish. Visibility can be set per breakpoint.</p>
+
+
 
         - Styling Text
       - To style your text select the text elements you wish to update and use the text formatting palette in the inspector. All the CSS properties regarding text can be updated for reach text element.
@@ -178,6 +202,53 @@ LINKS
 
     </section>
 
+    <section id="text">
+      <h1>Text</h1>
+
+      <h2>Styling Text</h2>
+      <p>Macaw allows you to set a variety of properties on your text elements using the Typography palette.</p>
+      <p>The order of the properties in the palette from left to right top to bottom. Font family, font weight, font size, line height, color, italic, uppercase, underline, letter spacing, word spacing, text indent, paragraph spacing and text alignment.</p>
+      <img src="images/text-styling.png" class="img-text-styling">
+      <p>NOTE: Currently all text style changes are applied to the entire text element.</p>
+
+      <h2>Type Stats</h2>
+      <p>Macaw provides more advanced stats for each of your text elements to help you find the right text styles for your design. Located in the bottom right of the Typography palette Macaw provides calculated values for total characters and average characters per line.</p>
+      <img src="images/text-type-stats.png" class="img-text-type-stats">
+    </section>
+
+    <section id="fonts">
+      <h1>Fonts</h1>
+      <p>By default Macaw provides the basic browser fonts like Arial, Helvetica, etc. In addition it also includes a curated list of Google Webfonts.</p>
+      <p>Each available font in the font family dropdown is labeled with a different icon displaying what font type.</p>
+      <img src="images/fonts-types.png" class="img-fonts-types">
+
+      <h2>Typekit Fonts</h2>
+      <p>Macaw allows you to add Typekit fonts to your project. Currently only one Typekit kit can be added to a project at a time.</p>
+
+      <h3>Adding Typekit Fonts</h3>
+      <p>Typekit fonts can be added by doing the following:</p>
+
+      <p>1. Create a Typekit kit containing the fonts you wish to use. This is done on the Typekit website.</p>
+      <p>2. Within your kit settings on Typekit add "localhost" to the allowed domains for your kit.</p>
+      <p>3. In Macaw open the font family dropdown. A text element will need to be selected to make it visible.</p>
+      <p>4. Click the "Add Fonts..." button in the top left of the dropdown.</p>
+      <img src="images/fonts-webfonts-add.png" class="img-fonts-webfonts-add">
+      <p>5. In the new dialog enter you Typekit kit ID.</p>
+      <img src="images/fonts-typekit-kit.png" class="img-fonts-typekit-kit">
+      <p>6. Macaw will give you a green mark if the fonts were imported correctly or a red "X" if it failed.</p>
+      <p>7. On success your Typekit fonts will be listed in the font list</p>
+
+      <p>IMPORTANT: Sometimes it can take Typekit some time to sync up and add "localhost" to your kit. In the event Macaw keeps saying your kit could not be imported, wait a few minutes and try again.</p>
+
+      <h3>Publishing Typekit Fonts</h3>
+      <p>On publish Macaw will analyze your project and in the event it finds that Typekit fonts are used it will be sure to add the necessary Typekit scripts to your files.</p>
+
+      <h2>System Fonts</h2>
+      <p>Macaw allows you to use any system fonts you might have in your design. By default these fonts are hidden in the font family dropdown. To enable them click the "Show System Fonts" button in the upper right corner of the font dropdown.</p>
+      <p>NOTE: While Macaw allows you to use system fonts in your designs it is unable to publish the fonts. Be sure to add all necessary font files to your site when you push the files to a server. If this is not done than users that don't have the fonts you used will not see them.</p>
+      <img src="images/fonts-system-fonts.png" class="img-fonts-system-fonts">
+    </section>
+
     <section id="images">
       <h1>Images</h1>
 
@@ -186,11 +257,11 @@ LINKS
 
       <h3>Import to Library</h3>
       <p>Importing images to your library allows you to move images into your Macaw project for later use. Once images are imported into your library you can drag them onto the canvas.</p>
-      <p>To import images to your library you can go to <strong class="key">File > Import to Library</strong> or use the keyboard shortcut <strong class="key">Shift+⌘+I (Mac)</strong> / <strong class="key">Ctrl+Shift+I (Windows)</strong>. Multiple images can be imported simultaneously.</p>
+      <p>To import images to your library you can go to <strong class="cmd">File > Import to Library</strong> or use the keyboard shortcut <strong class="key">Shift+⌘+I / Ctrl+Shift+I</strong>. Multiple images can be imported simultaneously.</p>
 
       <h3>Import to Canvas</h3>
       <p>Import to canvas performs the same way as "Import to Library" but in addition to adding all the images to your library they will also be added to the canvas.</p>
-      <p>To import to canvas you can go to <strong class="key">File > Import to Canvas</strong> or use the keyboard shortcut <strong class="key">⌘+I (Mac)</strong> / <strong class="key">Ctrl+I (Windows)</strong>. Multiple images can be imported simultaneously.</p>
+      <p>To import to canvas you can go to <strong class="cmd">File > Import to Canvas</strong> or use the keyboard shortcut <strong class="key">⌘+I / Ctrl+I</strong>. Multiple images can be imported simultaneously.</p>
 
       <h3>Drag Import</h3>
       <p>Images can also be imported directly to the canvas by dragging files from a folder outside of Macaw onto the canvas. This performs like "Import to Canvas" where all images will be both added to your library and to the current canvas.</p>
@@ -349,16 +420,36 @@ LINKS
     </section>
 
     <section id="pages">
-      Pages:
-  - Adding Pages
-    - Macaw allows you to have mutlple pages in one project. To add a page, open the page menu and click the new page button (icon). You can also create a new page by going to File > New Page (Mac ⌘+N, PC Ctrl+N). The app will ask you to provide a name for the new page and then add it to your project.
-  - Duplicating Pages
-    - Pages can be duplicated using the page menu. In the page menu click on a page's duplicate button (icon) to copy the page and all its elements. The new page will have the same name as the original with "copy" appended.
-  - Deleting Pages
-    - To delete a open the page menu and click the delete button (icon) next to the page that should be deleted.
-  - Page Properties
-    - Page titles can be set via the page title palette in the inspector. This is visible when no elements are selected.
-  - Publishing
+      <h1>Pages</h1>
+      <p>Macaw allows you to create an entire website inside the application. You can add as many pages as you need to your project. It also allows you to duplicate existing pages for easy page generation.</p>
+
+      <h2>Page Menu</h2>
+      <p>The "Page Menu" is where you can manage your pages as well as open up existing pages for editing. It is located in the upper left corner of the application. The menu contains a list of all pages currently in your project. When you mouse over each page additional buttons appear for duplicating the page and deleting the page.</p>
+      <img src="images/pages-menu.png" class="img-pages-menu">
+
+      <h2>Navigating to Pages</h2>
+      <p>Navigating to or opening a page can be done by opening the page menu and clicking on the page. This will open a new tab in Macaw for the page (if one is not already open for the selected page).</p>
+
+      <h2>Adding Pages</h2>
+      <p>To add a page, open the page menu and click the new page button (icon). You can also create a new page by going to <strong class="cmd">File > New Page</strong> or you can use the keyboard shortcut <strong class="key">⌘+N / Ctrl+N</strong>. The app will ask you to provide a name for the new page. As long as the new page's name does not conflict with an existing page in your project Macaw will create the new page.</p>
+
+      <h2>Setting Page Properties</h2>
+      <p>You can set a page's title using the "Page Title" palette which is visible when no elements are selected. This title will be inserted into the HTML on publish.</p>
+      <img src="images/pages-title.png" class="img-pages-title">
+
+      <h2>Renaming Pages</h2>
+      <p>You can rename any page by opening the "Page Menu" and double clicking on the page's name you wish to rename. This will allow you to type a new name. Once you have finished typing you can click anywhere outside the name to commit the change.</p>
+      <img src="images/pages-rename.png" class="img-pages-rename">
+
+      <h2>Duplicating Pages</h2>
+      <p>Any page in your project can be duplicated by opening the "Page Menu" and clicking the duplicate (icon) that is visible when you mouse over the page in the page list. This will create an exact copy of the original page and all its data. The name of the duplicated page will be the name of the original page with "copy" appended to the end.</p>
+
+      <h2>Deleting Pages</h2>
+      <p>You can delete a page from your project by opening the "Page Menu" and clicking the trashcan (icon) that is visible when you mouse over the page in the page list. When deleting a page Macaw will prompt you to confirm that you want to delete the selected page. IMPORTANT: This action cannot be undone.</p>
+
+      <h2>Publishing</h2>
+      <p>Macaw by default will publish each page with its own corresponding CSS file. You can also tell Macaw to consolidate styles across pages into a single CSS file by enabling the "Consolidate Page Styles" in the Publish Settings dialog.</p>
+      <img src="images/pages-consolidate.png" class="img-pages-consolidate">
     </section>
 
   </article>
