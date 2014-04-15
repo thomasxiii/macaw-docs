@@ -25,7 +25,7 @@
     <a href="#global-styles">Global Styles</a>
     <a href="#library">Library</a>
     <a href="#components">Components</a>
-    <a class="wip" href="#outline">Outline</a>
+    <a href="#outline">Outline</a>
     <a href="#pages">Pages</a>
     <a class="wip" href="#interactivity">Interactivity</a>
     <a class="wip" href="#publishing">Publishing</a>
@@ -180,23 +180,6 @@
       <h3>Toggling Visibility</h3>
       <p>Individual shadows can be toggled on/off using the eye (icon) for a shadow. If a shadow is toggled off it will not be added to the element both in Macaw and on publish. Visibility can be set per breakpoint.</p>
 
-
-
-        - Styling Text
-      - To style your text select the text elements you wish to update and use the text formatting palette in the inspector. All the CSS properties regarding text can be updated for reach text element.
-      ** Note: Text styles can only be applied to the entire text element at this time.
-    - Type Stats
-      - Macaw helps designers keep track of pesky little character counts and characters per line right in the interface. Simply select a text element to see its stats.
-    - Adding Typekit Fonts
-      - Macaw allows you to easily pull in your favorite Typekit fonts directly in the interface. To include Typekit fonts in your project open the font family dropdown and click the "Add Fonts" text. In the dialog that opens type in your a Typekit kit ID. Once entered Macaw will notify you if the import worked. Your Typekit fonts will now be included in the font dropdown. They will be labeled with a Typekit logo next to each one.
-      - Important: To enable Macaw access to your Typekit kit you will need to add 'localhost' as an allowed domain. This can be done on the Typekit website.
-    - Using System Fonts
-      - Macaw allows you to use all of your system fonts in your designs. By default they are hidden in the font family dropdown. To enable system fonts open the font family dropdown and click the "Show System Fonts" text in the top right. This will load in and include all your system fonts in the font list.
-      - Important: System fonts will only work when editing and viewing your design locally. They will not work when uploaded to a server unless the necessary steps are taken.
-
-
-
-
 LINKS
       <p>If you attach a URL to a button using Link field inside Inspector Pane, the button will redirect to that URL through an <strong>onClick</strong> JavaScript event. To change the button to a standard link, change the button tag name inside Inspector Pane to <strong>a</strong>, it will be then converted to a plain <strong>&lt;a&gt;</strong> tag in the output.</p>
 
@@ -245,7 +228,7 @@ LINKS
 
       <h2>System Fonts</h2>
       <p>Macaw allows you to use any system fonts you might have in your design. By default these fonts are hidden in the font family dropdown. To enable them click the "Show System Fonts" button in the upper right corner of the font dropdown.</p>
-      <p>NOTE: While Macaw allows you to use system fonts in your designs it is unable to publish the fonts. Be sure to add all necessary font files to your site when you push the files to a server. If this is not done than users that don't have the fonts you used will not see them.</p>
+      <p>NOTE: System fonts will only work when editing and viewing your design locally. They will not work when uploaded to a server unless the necessary steps are taken.</p>
       <img src="images/fonts-system-fonts.png" class="img-fonts-system-fonts">
     </section>
 
@@ -358,6 +341,49 @@ LINKS
 
       <p>Note: The name you give Macaw will be used only for reference within the library. It will not affect the markup in any way.</p>
       <img src="images/components.gif" class="img-components">
+    </section>
+
+    <section id="outline">
+      <h1>Outline (O)</h1>
+      <p>Macaw's Outline panel is much like the layers palette found in other design tools. It shows you all the elements on the current page, how those elements are structured and it also displays the z-index of your document. Elements that are higher in the outline will be displayed on top of elements below it. The outline is not just a visual tool. It can also be used to quickly structure your document, select elements, set element tags/classes (Renaming) and more.</p>
+
+      <p>The Outline can be toggled to using the "Outline" button in the top right corner of the app or using the <strong class="key">O</strong> key.</p>
+      <img src="images/outline-view.png" class="img-outline-view">
+
+      <h2>Moving Elements</h2>
+      <p>Elements can be moved by selecting the layers you wish to move and dragging them to the desired position. While dragging a blue indicator bar will represent where the elements will be placed. If the indicator bar is inside a container all moving elements will become children of that container.</p>
+      <img src="images/outline-move.png" class="img-outline-move">
+
+      <p>While moving elements you can also get a blue indicator box. When this indicator box is displayed it means that the element that is highlighted will become a container and all moving elements will be placed inside it.</p>
+      <img src="images/outline-drag-into.png" class="img-outline-drag-into">
+
+      <h2>Expanding/Collapsing Containers</h2>
+      <p>Layers for container elements can be expanded/collapsed to allow for easier traversal of the outline. Use the arrow (icon) to expand/collapse layers.</p>
+
+      <h2>Toggle Layer Visibility</h2>
+      <p>The visibility of layers in Macaw can be toggled on/off using the eye (icon) next to each layer. If a container layer with children is toggled all its children layers will also be toggled as well.</p>
+      <p>NOTE: This is strictly for use in the editor only. It does not affect the display of an element in the final published code.</p>
+
+      <h2>Locking Layers</h2>
+      <p>In some situations you may want to lock layers to make them uneditable. This allows you to edit other parts of your document without having to worry about making unintended changes.</p>
+      <p>Layers can be locked/unlocked by clicking the icon to the right of the Visibility icon. When layers are locked the icon will be displayed as a lock. When layers are unlocked they will just be a dot displayed.</p>
+
+      <h2>Renaming Layers</h2>
+      <p>The Outline can be the quickest way to quickly set element tags and classes or otherwise known as renaming. To rename an element in the outline you can double click on the elements name. Then you can start typing tags and classes. As you type a code hint dialog will popup giving you suggestions for tags and classes you have used elsewhere in your document.</p>
+
+      <h2>Outline Pro Tips</h2>
+      <p>Here are a few shortcuts/features for using the Outline.</p>
+
+      <h3>Tab Renaming</h3>
+      <p>When renaming elements you can quick jump and rename the element below it by using the <strong class="key">TAB</strong> key. You can jump to the element above it by using <strong class="key">Shift-TAB</strong>. This allows you to quickly rename multiple elements just by using the keyboard.</p>
+
+      <h3>Quickly Move Elements Forward/Backward</h3>
+      <p>You can quickly move elements forwards and backwards in the Outline by going to <strong class="cmd">Edit > Move Backgrounds</strong> <strong class="key">Cmd-[ / Ctrl-[</strong> or <strong class="cmd">Edit > Move Forwards</strong> <strong class="key">Cmd-] / Ctrl-]</strong>. When moving elements in this way the moving elements will be moved into containers as it hits them. Any collapsed layers will be skipped.</p>
+
+      <p>You can also move elements to the front or to the back by going to <strong class="cmd">Edit > Send to Back</strong> <strong class="key">Shift-Cmd-[ / Shift-Ctrl-[</strong> or  <strong class="cmd">Edit > Send to Front</strong> <strong class="key">Shift-Cmd-] / Shift-Ctrl-]</strong>.</p>
+
+      <h3>Quickly Scroll Canvas to Element</h3>
+      <p>You can quickly scroll the canvas to a specific element using the Outline. This can be done by clicking the elements icon next to it's name.</p>
     </section>
 
     <section id="global-styles">
