@@ -37,6 +37,14 @@ section {
   padding-top: 160px;
 }
 
+ul {
+  margin-left: 36px;
+}
+
+li {
+  list-style-type: square;
+}
+
 .content {
   float: left;
   width: 57.5%;
