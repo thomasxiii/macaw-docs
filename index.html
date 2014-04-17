@@ -534,7 +534,80 @@
 
     <section id="publishing">
       <h1>Publishing</h1>
+      <p>You can publish your project in Macaw at any time by going to <strong class="cmd">File > Publish</strong> or hitting <strong class="key">⌘+P / Ctrl+P</strong>. On publish Macaw will generate the necessary HTML, CSS, Images and Javascript files for your project. It will place all published files in a directory of the same name as your .mcw file. The files that Macaw generates depends on which publish settings you have enabled.</p>
 
+      <h2>Publish Settings</h2>
+      <p>You can control all of the publish settings using the Publish Settings Dialog. This dialog can be accessed by going to <strong class="cmd">File > Publish Settings</strong> or using the keyboard shortcut <strong class="key">Shift+⌘+P / Shift+Ctrl+P</strong>.</p>
+
+      <h3>Pages</h3>
+      <p>The "Pages" section of the Publish Settings dialog allows you to control how Macaw handles the different pages in your project.</p>
+      <img src="images/publishing-pages.png" class="img-publishing-pages">
+      <ul>
+        <li>The page list allows you to set which pages in your project will be published.</li>
+        <li><strong>Consolidate Page Styles</strong> determines if Macaw will publish a CSS file for each page or if it will merge all styles into a single CSS file.</li>
+      </ul>
+
+      <h3>Head & Tail</h3>
+      <p>The "Head & Tail" section of the publish settings dialog allows you to add code to include in the HEAD tag or the bottom of your BODY tag. Any code you add will be added to all pages. This is where you can add code for things like Google Analytics, etc.</p>
+
+      <h3>Styles</h3>
+      <p>The "Styles" section makes available options for how Macaw should export your CSS.</p>
+      <img src="images/publishing-styles.png" class="img-publishing-styles">
+      <ul>
+        <li><strong>Consolidate Styles</strong> </li>
+        <li><strong>Shorthand Properties</strong> </li>
+        <li><strong>Tag Selectors</strong> </li>
+        <li><strong>Advanced Selectors</strong> </li>
+        <li><strong>Trim Whitespace</strong> </li>
+        <li><strong>Add Browser Prefixes</strong> </li>
+      </ul>
+
+      <h3>Units</h3>
+      <p>The "Units" section allows you to have Macaw convert units for fonts and geometry to ems, rems, etc on publish. This allows you to design with more intuitive units and then let Macaw handle all the conversions.</p>
+      <img src="images/publishing-units.png" class="img-publishing-units">
+      <ul>
+        <li><strong>Font Size</strong> determines which unit Macaw will convert all font size unit to on publish.</li>
+        <li><strong>Geometry</strong> determines which unit Macaw will convert all pixel-based geometry values (width, height, etc) to on publish.</li>
+      </ul>
+
+      <h3>Grid</h3>
+      <p>The "Grid" section allows you to control how Macaw publishes the grid.</p>
+      <img src="images/publishing-grid.png" class="img-publishing-grid">
+
+      <ul>
+        <li><strong>Publish Grid</strong> determines if Macaw will publish out a seperate CSS file for your grid.</li>
+      </ul>
+      
+      <h3>Images</h3>
+      <p>The "Images" section controls how Macaw publishes images in your project.</p>
+      <img src="images/publishing-images.png" class="img-publishing-images">
+
+      <ul>
+         <li><strong>Generate Optimized Images</strong> sets whether Macaw should generate new optimized images publish. This is required in order to publish retina cropped images.</li>
+      </ul>
+
+      <h2>Preview Window</h2>
+      <p>Macaw provides a built in preview window for viewing your published design. Within this window you can view all pages in your design, view the outputted code, etc. This window is just like a browser window so you can click on links you have placed in your design as well.</p>
+      <img src="images/publishing-preview.png" class="img-publishing-preview">
+
+      <p>The interface buttons from left to right are:</p>
+      <ul>
+        <li><strong>Back/Forward</strong> buttons allow you to move forward or back to different pages you have viewed.</li>
+        <li>The <strong>Address Bar</strong> displays your local IP address to be used for Remove Preview, the current page you are viewing and a page menu for moving to other pages in your project.</li>
+        <li>The <strong>View Rendered Page</strong> button toggles the view to display the current page as it will be rendered in the browser.</li>
+        <li>The <strong>View HTML</strong> button toggles the view to display the current page's generated HTML.</li>
+        <li>The <strong>View CSS</strong> button toggles the view to display the current page's generated CSS.</li>
+        <li>The <strong>View Javascript</strong> button toggles the view to display the current page's Javascript.</li>
+        <li>The <strong>View in Finder</strong> button opens your current project in your native OS file explorer window.</li>
+        <li>The <strong>View in Browser</strong> button opens the current page in your default browser.</li>
+      </ul>
+
+      <h2>Remote Preview</h2>
+      <p>The Remove Preview features allows you to view your published design on other devices (iPads, iPhones, etc) instantly. It also pushes all updates to each of your devices everytime you publish. The only requirement is that all devices must be on the same local network.</p>
+
+      <p>To view your design on other devices all you need to do is use another device to navigate to the address in the Address Bar of your preview window. This will load your project up just like a normal webpage. Anytime you make a change and publish your project your device will refresh to display the changes automatically.</p>
+
+      <p>This feature is enabled whenever you publish your project and the Preview Window is open.</p>
     </section>
 
   </article>
