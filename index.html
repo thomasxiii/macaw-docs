@@ -37,7 +37,10 @@
       <h1>Introduction</h1>
 
       <h2>What is Macaw</h2>
-      <p></p>
+      <p>Macaw is a profressional web design tool built for both designers and developers. It was built with the goal to change how we design for the web. No longer should we need to create static deliverables and write code from scratch to bring them to life. With Macaw you to create responsive web designs using the web as your medium. It was designed to have an easy to use fluid interface similar to other tools so that you can get in and start designing quicker. It also boasts one of the smartest design to code engines ever built known as Alchemy. The engine analyzes your design and generates smart, efficient and succint code with a click of a button.</p>
+
+      <h2>What Macaw is Not</h2>
+      <p>Macaw is not a Content Management System. It also does not handle any server side technologies. It was developed to create wireframes, prototypes and mockups rapidly and to provide the static HTML, CSS and Javascript needed to quickly get your designs on the web. This could be either uploading your files straight to a server or it could be passing the files onto a developer for further development.</p>
     </section>
 
     <section id="drawing">
@@ -173,6 +176,25 @@
 
       <h2>Borders and Border Radius</h2>
       <p>Border and border radius can be set on all elements except images. Images require that you wrap the image in a container and apply the border properties to the containing element.</p>
+
+      <h3>Adding/Editing Borders</h3>
+      <p>Borders can be applied to an element using the border palette. Select the different sides you wish to apply borders to using the border selector located on the left side of the palette. You can select the center selector to add a border to all sides or you can select one or more of the top, right, bottom and left selectors by holding <strong class="key">Shift</strong> while you select them to apply borders to each side respectively. Once you select the sides you can specify border width, style and color. Each setting can be set seperately per side.</p>
+      <img src="images/borders-default.png" class="img-borders-default" />
+
+      <p>Example of an element with borders on all sides.</p>
+      <img src="images/borders-all-sides.png" class="img-borders-all-sides" />
+
+      <p>Example of an element with the same border styles only applied to the top and left.</p>
+      <img src="images/borders-two-sides.png" class="img-borders-two-sides" />
+
+      <p>Example of an element with different border styles on the top and left.</p>
+      <img src="images/borders-specific.png" class="img-borders-specific" />
+
+      <p>Using the side selectors you can toggle to the different sides to see/edit for border them.</p>
+
+      <h3>Adjusting Border Radius</h3>
+      <p>The border radius palette works very similar to the borders palette. You can select different sides using the selectors on the left side of the palette. Once you select the sides you want to set the border radius on type in or change the value in the input to set the border radius. Just like the borders palette you can select multiple sides at a time by holding <strong class="key">Shift</strong> while you select sides.</p>
+      <img src="images/border-radius.png" class="img-borders-radius" />
 
       <h2>Backgrounds</h2>
       <p>Macaw allows for setting background colors, images and even setting a gradient background. One element can have multiple background images/gradients applied, that can be managed inside the Backgrounds section of Inspector pane. Backgrounds can also be changed per breakpoint.</p>
@@ -535,6 +557,8 @@
     <section id="publishing">
       <h1>Publishing</h1>
       <p>You can publish your project in Macaw at any time by going to <strong class="cmd">File > Publish</strong> or hitting <strong class="key">⌘+P / Ctrl+P</strong>. On publish Macaw will generate the necessary HTML, CSS, Images and Javascript files for your project. It will place all published files in a directory of the same name as your .mcw file. The files that Macaw generates depends on which publish settings you have enabled.</p>
+
+      <p><strong>IMPORTANT:</string> On publish Macaw will generate a new folder with the same name as your .mcw file. It will then place all published files into this directory. On every publish it will clean out the directory so be sure not to place important files in it.</p>
 
       <h2>Publish Settings</h2>
       <p>You can control all of the publish settings using the Publish Settings Dialog. This dialog can be accessed by going to <strong class="cmd">File > Publish Settings</strong> or using the keyboard shortcut <strong class="key">Shift+⌘+P / Shift+Ctrl+P</strong>.</p>
