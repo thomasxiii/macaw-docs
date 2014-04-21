@@ -120,40 +120,53 @@
       <p>Positioning modes can be set using the three icons on the left of the property bar, which are visible when an element is selected. The wave icon is used for static, the crosshair is for absolute and the pin is for fixed positioning.</p>
 
       <h2>Static</h2>
-      <p>Static is the default positioning mode of Macaw. Elements set to static are positioned in relation to the element that precedes it in the document. This can be somewhat confusing to someone unfamiliar with web development, however it's very important to wrap your head around as most of the web is constructed using these mechanics.</p>
+      <p>Static is the default positioning mode of Macaw. Elements set to static are positioned in relation to the element that precedes it in the document. This can be somewhat confusing to someone unfamiliar with web development, however it's very important to learn the concept of static positioning as most of the web is constructed using these mechanics.</p>
 
-      <p>Margins are the properties used to set the distance between an element and the one before it. When dragging and element around the canvas, Macaw will automatically calculate the margins necessary to position the element. You can also use the margin controls in the property bar for fine-tuning.</p>
+      <p>Margins are the properties used to set the distance between an element and the one before it. When dragging an element around the canvas, Macaw will automatically calculate the margins necessary to position the element. You can also use the margin controls in the property bar for fine-tuning.</p>
+
+      <p>Static positioned elements have a blue outline.</p>
 
       <p>Note: Elements using static positioning are essentially chained together. Therefore, modifying properties of one element may affect the positioning of other elements.</p>
+
+      <img src="design-basics/img/position-static.png" alt="Static Position">
 
       <h2>Absolute</h2>
       <p>Absolute positioning allows elements to be placed at a specific coordinate, which is relative to its parent's coordinates. Elements set to absolute are not in the document flow and, therefore, do not affect the position of the elements around it.</p>
 
+      <p>Absolute positioned elements have an orange outline.</p>
+
+      <img src="design-basics/img/position-absolute.png" alt="Absolute Position">
+
       <h2>Fixed</h2>
       <p>Fixed positioning is similar to absolute positioning except that the coordinates set for fixed elements are relative to the viewport instead of the element's parent. So, elements with fixed positioning will stay in place as the document is scrolled.</p>
-      <img src="design-basics/img/position-static-absolute-fixed.png" alt="">
+
+      <p>Fixed positioned elements have a green outline.</p>
+
+      <img src="design-basics/img/position-fixed.png" alt="Fixed Position">
 
       <h2>Origins</h2>
-      <p>Origins define the direction in which an element is positioned. The options are fairly self-explanatory, but they translate to different properties based on the positioning mode.</p>
+      <p>Origins define the direction in which an element is positioned. The options translate to different properties based on the positioning mode.</p>
 
       <p>Elements with static positioning allow x-origins to be changed to left, right or center. Left origins will use margin-left to position an element. Right origins will float an element to the right and utilize margin-right for positioning. Center origins will force an element to center using <code>auto</code> for <code>margin-left</code> and <code>margin-right</code>.</p>
 
       <p>Elements with absolute or fixed positioning have x and y origin controls. Left and right x-origins will publish as left and right properties. Center x-origins will publish as <code>left: 0; right: 0; margin-top: auto; margin-bottom: auto;</code>. Y-origins will use top and bottom properties and center y-origins will publish as <code>top: 0; bottom: 0; margin-top: auto; margin-bottom: auto;</code>.</p>
 
       <h2>Guides</h2>
-      <p>Macaw provides on-canvas positioning guides to help you position an element precisely how you want it. Positioning guides change color to identify the positioning mode used: blue is for static, orange is for absolute and green is for fixed.</p>
+      <p>Macaw provides on-canvas positioning guides to help you position an element precisely how you want it. Positioning guides appear when dragging an element around the canvas when its edges align with another element or the grid.</p>
 
-      <p>Positioning guides appear when dragging or selecting an element. If they do not appear, they may have been toggled off. They can be toggled back on using <strong class="cmd">View > Toggle Positioning Guides</strong> or <strong class="key osx">Cmd+'</strong> <strong class="key win">Ctrl+'</strong>.</p>
+      <p>If guides do not appear, they may have been toggled off. They can be toggled back on using <strong class="cmd">View > Toggle Positioning Guides</strong> or <strong class="key osx">Cmd+'</strong> <strong class="key win">Ctrl+'</strong>.</p>
 
       <h2>Margins</h2>
-      <p>Margin indicators (solid semi-transparent blocks that show up on element's sides when it's selected) help to determine how an element will be placed on the canvas with relation to the surrounding elements.</p>
+      <p>Margin indicators (solid semi-transparent blocks that show up on element's sides when it's selected) help to determine how an element will be placed on the canvas with relation to the surrounding elements. Indicators change color to identify the positioning mode used: blue is for static, orange is for absolute and green is for fixed.</p>
 
-      <p><strong>Note:</strong>Top position/margin can only be set in pixel values.</p>
+      <p><strong>Note:</strong> Top position/margin can only be set in pixel values.</p>
 
       <h2>Padding</h2>
-      <p>Paddings can be applied to all elements except the ones created with standard Element tool. If a standard element becomes a container (with child elements of any type), it gains the ability to have its paddings set.</p>
+      <p>Padding can be applied to all elements except for empty elements and empty containers. Once a standard element becomes a container (with child elements of any type), it gains the ability to have its paddings set.</p>
 
-      <p>Padding is set inside the Dimensions section of the Inspector Pane and are symbolized by an interactive map (?) of properties (all paddings, top, left, bottom and right). Value field on the side of padding map(?) shows padding value for the currently selected property. Apart from setting individual paddings, or applying the padding to all through the center most icon, holding shift and clicking on different padding properties allows for setting multiple paddings at the same time (e.g. top and bottom).</p>
+      <p>Padding is set inside the Dimensions section of the Inspector Pane and is symbolized by an interactive map of padding properties (all paddings, top, left, bottom and right). A value field next to the padding map shows padding value for the currently selected property. Apart from setting individual paddings, or applying the padding to all side with the center most icon, holding shift and clicking on different padding properties allows for setting multiple paddings at the same time (e.g. top and bottom).</p>
+
+      <img src="design-basics/img/padding-palette.png" alt="Padding">
     </section>
 
     <section id="properties">
