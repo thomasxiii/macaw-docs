@@ -173,7 +173,7 @@
       <h1>Styling/Properties</h1>
       <p>Macaw allows you to apply various styles to your elements using the Inspector Pane, with all of the styles translating to appropriate CSS counterparts.</p>
 
-      <p>To set element's styles you need to have that element selected and pick desired styles from the Inspector Pane. Some styles (e.g. border &amp; border radius for standard elements and text styles for text elements) can be applied to multiple elements at the same time. To do that, just hold SHIFT and click on desired elements to select them all, then pick their common styles.</p>
+      <p>To set element's styles you need to have that element selected and pick desired styles from the Inspector Pane. Some styles (e.g. border &amp; border radius for standard elements and text styles for text elements) can be applied to multiple elements at the same time. To do that, just hold <strong class="key">SHIFT</strong> and click on desired elements to select them all, then pick their common styles.</p>
 
       <p>When you create new elements, by default they have some styles applied to them, to make it easier for you to work with them.</p>
 
@@ -213,7 +213,7 @@
       <p>Macaw allows for setting background colors, images and even setting a gradient background. One element can have multiple background images/gradients applied, that can be managed inside the Backgrounds section of Inspector pane. Backgrounds can also be changed per breakpoint.</p>
 
       <h3>Background Color</h3>
-      <p>Background color can be set through the Background Color value field. Supported values are HEX e.g. #0064f0, RGB e.g. rgb(0, 100, 240) and HSL e.g. hsl(215, 100%, 47%). You can also put transparent inside that field and it will get transformed to rgba(0, 0, 0, 0), the same will happen if the value is deleted. Macaw also supports semi-transparent background colors, which can be entered as RGBA e.g. rgba(0, 99, 239, 0.52) and HSLA e.g. hsla(215, 100%, 47%, 0.52).</p>
+      <p>Background color can be set through the Background Color value field. Supported values are HEX e.g. #0064f0, RGB e.g. rgb(0, 100, 240) and HSL e.g. hsl(215, 100%, 47%). You can also use the keyword 'transparent' as the value and it will be converted to rgba(0, 0, 0, 0) (the same will happen if the value is deleted). Macaw also supports semi-transparent background colors, which can be entered as RGBA e.g. rgba(0, 99, 239, 0.52) and HSLA e.g. hsla(215, 100%, 47%, 0.52).</p>
       <img src="images/background-color-field.png" class="img-background-color-field" />
 
       <p>Background colors can be also chosen through the Color Picker dialog, by clicking on the color well near the background color value field. This will launch Macaw's Color Picker dialog in which you can adjust the color and set transparency as well as the type of the outputted value (HEX, RGB(A), HSL(A)).</p>
@@ -229,7 +229,7 @@
       <p>To delete a background click on the trashcan button or right-click on the background and select <strong class="cmd">Delete</strong>.</p>
 
       <h4>Ordering</h4>
-      <p>The background palette allows for drag and drop of backgrounds to set the order that they will render on your elements.</p>
+      <p>The background palette allows for dragging and dropping of backgrounds to set the order that they will render in your element.</p>
 
       <h4>Editing</h4>
       <p>To edit a background, double click on the background you wish to edit in the inspector or right-click and select <strong class="cmd">Edit</strong>.</p>
@@ -238,7 +238,7 @@
       <p>Individual backgrounds can be toggled on/off using the eye (icon) for a background. If a background is toggled off it will not be added to the element both in Macaw and on publish. Visibility can be set per breakpoint.</p>
 
       <h4>Selecting Background Images</h4>
-      <p>Within the image background dialog you can select to import a new image to use for your background or you can pick an existing image from your library. Background images can be scaled for retina using the <strong class="btn">@2x</strong>.</p>
+      <p>Within the image background dialog you can select to import a new image to use for your background or you can pick an existing image from your library. Background images can be scaled for retina using the <strong class="btn">@2x</strong> button.</p>
 
       <h2>Shadows</h2>
       <p>Macaw allows you to add drop, inner and text shadows to elements on the canvas. Multiple shadows can be added to a single element and shadows can be changed per breakpoint.</p>
@@ -250,7 +250,7 @@
       <p>To delete a shadow click on the trashcan button or right-click on the shadow and select <strong class="cmd">Delete</strong>.</p>
 
       <h3>Ordering</h3>
-      <p>The shadow palette allows for drag and drop of shadows to set the order that they will render on your elements.</p>
+      <p>The shadow palette allows for dragging and dropping of shadows to set the order that they will render on your elements.</p>
 
       <h3>Editing</h3>
       <p>To edit a shadow, double click on the shadow you wish to edit in the inspector or right-click and select <strong class="cmd">Edit</strong>.</p>
@@ -261,7 +261,7 @@
       <h2>Links</h2>
       <p>Macaw allows you to add links to any element in your design. You can easily link to another page in your project or you can type in a URL.</p>
 
-      <p>By default Macaw will add links using a "onclick" event. To prevent this from occurring change the element's tag to an anchor tag.</p>
+      <p>By default Macaw will add links using an &quot;onclick&quot; event. To use anchor tag with an HREF (instead of an onlick event), change the element's tag to an anchor. To do this, rename the element in either the Inspector or Outline pane (i.e. 'a.classname' where 'classname' can be any description of your element).</p>
 
       <h3>Linking to Pages</h3>
       <p>To have an element link to another page in your project you can use the "Page Menu" in the link palette to select the page you want to link to.</p>
