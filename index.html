@@ -341,22 +341,24 @@
       <p>Images by default will always have a height of "auto" and will preserve their proportions on transform or width change. To change an images width and height independently see "Cropping Images" below.</p>
 
       <h2>Retina Images</h2>
-      <o>Macaw makes toggling images to retina dimensions with a single button click. Any image can be toggled using the <strong class="btn">@2x</strong> button in the images palette.</p>
+      <o>Macaw allows for the toggling of images to retina dimensions with a single button click. Any image can be toggled using the <strong class="btn">@2x</strong> button in the images palette.</p>
       <p>Note: On retina enabled devices, images on the canvas and images used for backgrounds will be imported with the <strong class="btn">@2x</strong> enabled by default.</p>
       <img src="images/images-retina.png" class="img-images-retina">
 
       <h2>Generating Optimized Images</h2>
-      <p>Macaw makes available the ability to generate optimized images. What this does is on project publish Macaw will analyze all the images in your project and generate new images based on their dimensions. It will also generate regular and @2x retina images as well. The benefit of this is to ensure that your finished project will not contain unnecessarily large images. Instead it will have images at exactly the size it needs so that you site will download as quick as possible.</p>
+      <p>Macaw makes available the ability to generate optimized images. On project publish, Macaw will analyze all the images in your project and generate new images based on their dimensions. It will also generate regular and @2x retina images. The benefit of this is to ensure that your finished project will not contain unnecessarily large images. Instead it will have images at exactly the size it needs so that you site will download as quick as possible.</p>
 
-      <p>"Generate Optimized Images" can be enabled in the "Publish Settings" dialog under the "Images" section.</p>
+      <p>&quot;Generate Optimized Images&quot; can be enabled in the &quot;Publish Settings&quot; dialog under the &quot;Images&quot; section. To view this window, go to <strong class="cmd">File > Publish Settings</strong> or use the keyboard shortcut <strong class="key osx">⌘+SHIFT+P</strong> <strong class="key win">Ctrl+SHIFT+P</strong></p>
       <img src="images/images-generate.png" class="img-images-generate">
 
       <h2>Cropping Images</h2>
       <p>Macaw allows you to crop individual instances of images. This allows you to dynamically generate differently proportioned images from a single image inside your project. Images can also be cropped per breakpoint.</p>
-      <p>Note: To be able to crop images in your project you must enable "Generate Optimized Images" your project's publish settings under the "Images" section. It can also be enabled by double clicking on an image. Macaw will prompt you and ask if you would like to enable it.</p>
+      <p>Note: To be able to crop images in your project you must enable &quot;Generate Optimized Images&quot; in your project's publish settings under the &quot;Images&quot; section. It can also be enabled by double clicking on an image. Macaw will prompt you and ask if you would like to enable it.</p>
 
       <h3>Perform Image Crop</h3>
-      <p>To begin cropping an image element double click it on the canvas. This will enter image crop mode and additional transform handles will become available. Within crop mode you can scale the image inside it frame using the transform handles at each corner of the image, you can drag the image to move the image inside its frame (as long as the frame is smaller than the image's dimensions) and you can scale the frames width and height using the frame handles at the top, right, bottom and left sides of the frame. Images can be cropped multiple times. In the event you want to reset an image crop to the original image use the image <strong class="btn">Reset</strong> button. See "Resetting Images" below.</p>
+      <p>To begin cropping an image element double click it on the canvas. This will enter image crop mode and additional transform handles will become available. Within crop mode you can scale the image inside it frame using the transform handles at each corner of the image, you can drag the image to move the image inside its frame (as long as the frame is smaller than the image's dimensions) and you can scale the frames width and height using the frame handles at the top, right, bottom and left sides of the frame. Images can be cropped multiple times. In the event you want to reset an image crop to the original image use the image <strong class="btn">Reset</strong> button. See &quot;Resetting Images&quot; below.</p>
+
+      <p><strong>Note:</strong> Images cannot be resized / scaled to be smaller than the current crop area. To sacle an image when in crop mode, you must first crop the image.</p>
 
       <h3>Committing Image Crop</h3>
       <p>Once an image has been cropped to the desire dimensions you can leave image crop mode by double clicking anywhere outside of the image. This will apply the changes that were made and the new updated image will be generated.</p>
@@ -383,7 +385,7 @@
       <img src="images/images-reset.png" class="img-images-reset">
 
       <h2>Responsive Images</h2>
-      <p>By default images can be scaled and toggled to retina per breakpoint. When "Generate Optimized Images" is enabled images can also be cropped per breakpoint. Each of these topics have been discussed up above. When "Generate Optimized Images" is toggled on Macaw will include the "rimages.js" file with your published project files in the js folder. This library handles the swapping out of images both for retina and across breakpoints. All of the image's settings for this library are applied to the images tag via data attributes.</p>
+      <p>By default images can be scaled and toggled to retina per breakpoint. When &quot;Generate Optimized Images&quot; is enabled images can also be cropped per breakpoint. Each of these topics have been discussed in previous sections. When "Generate Optimized Images" is toggled on Macaw will include the &quot;rimages.js&quot; file with your published project files in the js folder. This library handles the swapping out of images both for retina and across breakpoints. All of the image's settings for this library are applied to the images tag via data attributes.</p>
     </section>
 
     <section id="canvas">
