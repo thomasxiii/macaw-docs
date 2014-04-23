@@ -29,6 +29,10 @@ h4 {
   font-weight: 500;
 }
 
+a {
+  color: rgb(141, 141, 141);
+}
+
 p {
   margin-bottom: 1em;
 }
@@ -45,6 +49,27 @@ li {
   list-style-type: square;
 }
 
+footer {
+  margin-top: 100px;
+  padding: 30px 0;
+  border-top: 1px solid rgb(226, 226, 226);
+  font-size: 0.8em;
+  color: rgb(141, 141, 141);
+  text-align: center;
+}
+
+.home {
+  position: fixed;
+  top: -4px;
+  left: 8.5%;
+  width: 64px;
+  height: 64px;
+}
+
+.logo {
+  width: 64px;
+}
+
 .content {
   float: left;
   width: 57.5%;
@@ -59,7 +84,6 @@ li {
   left: 8.5%;
   z-index: 7;
   width: 15%;
-  height: 286px;
   font-size: 1em;
   color: rgb(141, 141, 141);
 }
@@ -94,6 +118,38 @@ em {
   border-radius: 3px;
   background: rgba(0, 0, 0, .07);
   font-weight: 500;
+  position: relative;
+}
+
+.key.osx,
+.key.win {
+  margin-left: 18px;
+}
+
+.key.osx:before,
+.key.win:before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: -18px;
+  width: 24px;
+  height: 24px;
+  display: block;
+  background-repeat: no-repeat;
+}
+
+.key.osx:before {
+  background-image: url(../images/osx-logo.png);
+  background-size: 14px 17px;
+}
+
+.key.osx {
+  margin-right: 10px;
+}
+
+.key.win:before {
+  background-image: url(../images/windows-logo.png);
+  background-size: 16px 17px;
 }
 
 .cmd {
@@ -107,6 +163,14 @@ em {
   border-radius: 3px;
   background: rgba(0, 0, 0, .05);
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.hamburger {
+  display: none;
+}
+
+.intro {
+  color: #bbb;
 }
 
 code {
@@ -125,6 +189,19 @@ code {
 }
 
 @media(max-width: 800px) {
+  .home {
+    left: 20px;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 84px;
+    width: 64px;
+    height: 64px;
+  }
+
   .content {
     clear: both;
     width: 66%;
@@ -135,7 +212,12 @@ code {
     display: none;
     position: static;
     float: left;
-    margin-top: 25px;
+    margin-top: 85px;
     margin-left: 17%;
+    font-size: 1.2em;
+  }
+
+  .primary-nav.is-visible {
+    display: block;
   }
 }
