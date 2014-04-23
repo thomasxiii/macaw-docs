@@ -33,6 +33,14 @@ a {
   color: rgb(141, 141, 141);
 }
 
+a:hover {
+  color: rgb(0, 173, 255);
+}
+
+a.is-active {
+  color: rgb(237, 72, 119);
+}
+
 p {
   margin-bottom: 1em;
 }
@@ -90,15 +98,6 @@ footer {
 
 .primary-nav a {
   display: block;
-  color: rgb(141, 141, 141);
-}
-
-.primary-nav a:hover {
-  color: rgb(0, 173, 255);
-}
-
-.primary-nav a.is-active {
-  color: rgb(237, 72, 119);
 }
 
 .wip {
