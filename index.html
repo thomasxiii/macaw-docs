@@ -53,11 +53,11 @@
 
       <h3>Units</h3>
       <p>You can draw elements with percentage or pixel based widths and positions. The controls for these options appear in the property bar after selecting a drawing tool.</p>
-      <img src="design-basics/img/percentage-or-px-based-width-and-x.png" alt="">
+      <img src="images/percentage-or-px-based-width-and-x.png" alt="">
 
       <h3>Snap</h3>
       <p>You can toggle Snap by selecting <strong class="cmd">View > Toggle Snap</strong> or pressing <strong class="key osx">Cmd+U</strong> <strong class="key win">Ctrl+U</strong>. When enabled, your cursor will snap to the grid, canvas boundaries and other elements as you draw.</p>
-      <img src="design-basics/img/drawing-snapping.gif" alt="">
+      <img src="images/drawing-snapping.gif" alt="">
 
       <h3>Drag Origin</h3>
       <p>When drawing an element, hold <strong class="key osx">Option</strong> <strong class="key win">Alt</strong> to change the element's origin instead of its size.</p>
@@ -73,7 +73,7 @@
       <p>You can also create containers by selecting an array of elements and using the <strong class="cmd">Elements > Group</strong> command or <strong class="key osx">Cmd+G</strong> <strong class="key win">Ctrl+G</strong>. Groups created in this way will automatically set the group dimensions to fit the boundaries of the children.</p>
 
       <p>Note: If the bottommost element being grouped surrounds all of the other elements, Macaw will ask if you would like to transfer presentation attributes to the new container. This will place all other selected elements inside the larger element. It is highly recommended that you do so as it typically results in cleaner and more semantic markup.</p>
-      <img src="design-basics/img/transfering-presentation-attributes.gif" alt="">
+      <img src="images/transfering-presentation-attributes.gif" alt="">
 
       <h2>Text Tool (T)</h2>
 
@@ -86,14 +86,14 @@
 
       <h3>Dimensions</h3>
       <p>When a text element is selected, resize handles help you identify it's type and properties. If side handles are present, they indicate that an element's width is set in px or %. Top and bottom handles indicate that this text element has a height set in px or %. Lack of handles show that width or height is set to auto.</p>
-      <img src="design-basics/img/text-selection-boxes.png" alt="">
+      <img src="images/text-selection-boxes.png" alt="">
 
       <h3>Paragraphs versus line breaks</h3>
       <p>Hitting <strong class="key">Return</strong> to separate lines of text inside a text box will result in code output for that box being divided into several paragraphs. You can also use <strong class="key">Shift+Return</strong> to create line breaks (&lt;br&gt;) in the code output.</p>
 
       <h3>Lorem Insertion</h3>
       <p>Macaw supports <em>Lorem Ipsum</em> text generation, for quickly filling text elements with dummy text. Simply type <strong class="key">loremXY</strong> and press <strong class="key">TAB</strong>. In this shortcut, Y must be set to either 'w' for words, 's' for sentences or 'p' for paragraphs. X must be an integer indicating the number of Y to insert. For example, <strong class="key">lorem3p</strong> would insert three paragraphs and <strong class="key">lorem2s</strong> would insert two sentences.</p>
-      <img src="design-basics/img/lorem-generator.gif" alt="">
+      <img src="images/lorem-generator.gif" alt="">
 
       <h2>Input Tool (N)</h2>
       <p>Text, email, password, number, search and URL input elements can all be drawn using the Input Tool. By default, Macaw will draw a standard text input. To change the input type before drawing, click and hold on the input tool icon to reveal a sub-menu of input types. You can change and existing input type using the Type drop-down in the inspector. Note: changing the input type is not immediately noticeable within Macaw. However, the type attribute will be set when published.</p>
@@ -108,12 +108,12 @@
 
       <h2>Select (Shift-N)</h2>
       <p>The select element is basically a drop-down list. You can modify the available options for the select using the list builder in the Inspector. You can add an option by clicking the <strong class="btn">+</strong> button. Double-clicking the option name allows you to edit the text. Click and drag an option to rearrange it and click the trash icon to delete it. Note: the first option will be used as the default.</p>
-      <img src="design-basics/img/select-options.gif" alt="">
+      <img src="images/select-options.gif" alt="">
 
       <h2>Checkbox &amp; Radio (Shift-N)</h2>
       <p>Checkbox and radio elements can be drawn by clicking and dragging on the canvas with their respective tools. Both elements have a minimum width of 66 px and minimum height of 22 px, that are applied when drawing, but can be adjusted later.</p>
       <p>When a checkbox or radio element is added to the canvas, three elements are actually created: a checkbox or radio, a label and a container for them both.</p>
-      <img src="design-basics/img/radio-checkbox-structure.gif" alt="">
+      <img src="images/radio-checkbox-structure.gif" alt="">
     </section>
 
     <section id="positioning">
@@ -132,21 +132,21 @@
 
       <p>Note: Elements using static positioning are essentially chained together. Therefore, modifying properties of one element may affect the positioning of other elements.</p>
 
-      <img src="design-basics/img/position-static.png" alt="Static Position">
+      <img src="images/position-static.png" alt="Static Position">
 
       <h2>Absolute</h2>
       <p>Absolute positioning allows elements to be placed at a specific coordinate, which is relative to its parent's coordinates. Elements set to absolute are not in the document flow and, therefore, do not affect the position of the elements around it.</p>
 
       <p>Absolute positioned elements have an orange outline.</p>
 
-      <img src="design-basics/img/position-absolute.png" alt="Absolute Position">
+      <img src="images/position-absolute.png" alt="Absolute Position">
 
       <h2>Fixed</h2>
       <p>Fixed positioning is similar to absolute positioning except that the coordinates set for fixed elements are relative to the viewport instead of the element's parent. So, elements with fixed positioning will stay in place as the document is scrolled.</p>
 
       <p>Fixed positioned elements have a green outline.</p>
 
-      <img src="design-basics/img/position-fixed.png" alt="Fixed Position">
+      <img src="images/position-fixed.png" alt="Fixed Position">
 
       <h2>Origins</h2>
       <p>Origins define the direction in which an element is positioned. The options translate to different properties based on the positioning mode.</p>
@@ -170,7 +170,7 @@
 
       <p>Padding is set inside the Dimensions section of the Inspector Pane and is symbolized by an interactive map of padding properties (all paddings, top, left, bottom and right). A value field next to the padding map shows padding value for the currently selected property. Apart from setting individual paddings, or applying the padding to all side with the center most icon, holding shift and clicking on different padding properties allows for setting multiple paddings at the same time (e.g. top and bottom).</p>
 
-      <img src="design-basics/img/padding-palette.png" alt="Padding" style="width: 50%;">
+      <img src="images/padding-palette.png" alt="Padding" style="width: 50%;">
     </section>
 
     <section id="properties">
@@ -420,7 +420,7 @@
 
       <h3>Gutter</h3>
       <p>This is the space between grid columns. It is always set in percentages.</p>
-      <img src="design-basics/img/grid-setting-up.gif" alt="">
+      <img src="images/grid-setting-up.gif" alt="">
     </section>
 
     <section id="components">
