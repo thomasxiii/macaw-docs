@@ -280,11 +280,47 @@
       <h2>Styling Text</h2>
       <p>Macaw allows you to set a variety of properties on your text elements using the Typography palette. The order of the properties in the palette from left to right, top to bottom are: font family, font weight, font size, line height, color, italic, uppercase, underline, letter spacing, word spacing, text indent, paragraph spacing and text alignment.</p>
       <img src="images/text-styling.png" class="img-text-styling">
-      <p>NOTE: Currently all text style changes are applied to the entire text element.</p>
 
       <h2>Type Stats</h2>
       <p>Macaw provides more advanced stats for each of your text elements to help you find the right text styles for your design. Located in the bottom right of the Typography palette, Macaw provides calculated values for total characters and average characters per line.</p>
       <img src="images/text-type-stats.png" class="img-text-type-stats">
+
+      <h2>Rich Text Editing</h2>
+      <p>Macaw allows you to add inline styles to text inside your text elements. This is done by applying styles to a tag or node within your text. Each text element can contain its own styles for each node that will be globally applied to all like nodes within that text element.</p>
+      <p>NOTE: Currently Macaw only allows for the creation of nodes one level deep restricting the creation of nodes within nodes.</p>
+
+      <h3>Available Tags/Nodes</h3>
+      <p>Macaw allows you to add nodes with tags of span, a, em and strong. All tags have been stripped of their default styling to allow for the most customization.</p>
+
+      <h3>Creating Rich Text Node</h3> 
+      <p>You can do this by doing the following:</p>
+
+      <p>1. Begin by going into edit mode for your text.</p>
+      <p>2. Select the text that you want to style.</p>
+      <p>3. Using the inspector panel on the right select the tag you wish to wrap your selection.</p>
+      <p>4. Style the new node using the palettes on the right.</p>
+
+      <h3>Selecting Nodes</h3>
+      <p>When a text element contains nodes you can select an entire node's contents by double clicking on any of the text inside it or by placing your cursor anywhere in it's text. In addition if a selection is made that partially contains a node the selection will be updated to either contain just the node OR to contain the text without the node. This is to ensure that the code inside your text element is as clean as possible.</p>
+
+      <h3>Styling Text Nodes</h3>
+      <p>Styling text nodes within text elements is as easy as placing your cursor anywhere inside the node OR selecting the entire nodes contents (double click anywhere within the node's text). Once a node is selected you can use the palettes on the right to style the node.</p>
+
+      <h3>Shared Styles</h3>
+      <p>All nodes that share the same tag will share styles within each text element. This just means that if you create a blue link in the text all anchors in that text element will be blue. In the event you update that link to be red all anchors within the text will be updated as well. This is to allow you to edit styles quickly across entire text elements.</p>
+
+      <h3>Copying Rich Text Styles</h3>
+      <p>In the event you have two text elements that should contain the same rich text styles you can use the "Copy Visual Attributes" command to copy both the element's styles and all its rich text node styles over to the other element.</p>
+
+      <h3>Changing a Node's Tag</h3>
+      <p>An existing nodes tag can be changed at any time by selecting the node and using the tag buttons at the top of the inspector. On change of the tag if any existing styles exist for the new tag they will be applied to the node.</p>
+
+      <h3>Deleting a Node</h3>
+      <p>Nodes can be removed by first selecting the tag and clicking the "No Tag" button located in the inspector.</p>
+
+
+
+
     </section>
 
     <section id="fonts">
