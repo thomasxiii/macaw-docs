@@ -20,6 +20,7 @@
     <a href="#positioning">Positioning</a>
     <a href="#properties">Styling/Properties</a>
     <a href="#display">Display</a>
+    <a href="#states">States</a>
     <a href="#text">Text</a>
     <a href="#rich-text">Rich Text</a>
     <a href="#fonts">Fonts</a>
@@ -299,6 +300,31 @@
       <h2>Outline</h2>
       <p>The display toggle in the outline is located on the left side of the element's layer and is indicated by an "eye" icon or a dot icon if set to display none. Clicking on the "eye" icon will toggle the element's display between "visible" and "invisible". <strong class="key osx">⌘+Click</strong> <strong class="key win">Ctrl+Click</strong> will toggle it's display between "visible" and "none".</p>
       <img src="images/display-outline.png" class="img-display-outline">
+    </section>
+
+    <section id="states">
+      <h1>States</h1>
+      <p>Macaw allows you to set :active, :hover and :focus states for all your elements. All visual styles can be set per state except dimension and position properties. States can also be set per breakpoint.</p>
+
+      <h2>State Buttons</h2>
+      <p>Element states can be applied by using the state buttons located just under element name, id and variable fields. They are visible when you have a single element selected.</p>
+      <img src="images/states-buttons.png" class="img-states-buttons">
+
+      <h2>Available States</h2>
+      <p><strong class="key">Default</strong> The default state represents how the element will be styled normally. The default state will result in no CSS psuedo-class being used in the published CSS.</p>
+      <p><strong class="key">Hover</strong> The hover state represents how the element will be styled while the mouse is over the element. The hover state will use the :hover psuedo-class in the published CSS.</p>
+      <p><strong class="key">Active</strong> The active state represents how the element will be styled when activated by the user. When a user mouses down on a button for example. The active state will use the :active psuedo-class in the published CSS.</p>
+      <p><strong class="key">Focus</strong> The focus state represents how the element will be styled while the element has focus. The focus state will use the :focus psuedo-class in the published CSS.</p>
+
+      <h2>Setting State Styles</h2>
+      <p>To set state specific styles on an element by doing the following:</p>
+      <p>1. Select the element you wish to style.</p>
+      <p>2. Select the appropriate state (default, hover, active or focus).</p>
+      <p>3. Style away.</p>
+
+      <p>NOTE: While an element is selected Macaw will stay on the currently selected state. As soon as the element is deselected it will switch by to the "default" state.</p>
+
+
     </section>
 
     <section id="text">
