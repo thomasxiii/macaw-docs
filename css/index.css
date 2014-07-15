@@ -220,3 +220,13 @@ code {
     display: block;
   }
 }
+
+.button-list p {
+  margin-bottom: .4em;
+  line-height: 28px;
+}
+
+.button-list p img {
+  float: left;
+  margin: 4px 10px 0 0;
+}
