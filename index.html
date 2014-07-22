@@ -19,7 +19,10 @@
     <a href="#drawing">Drawing</a>
     <a href="#positioning">Positioning</a>
     <a href="#properties">Styling/Properties</a>
+    <a href="#display">Display</a>
+    <a href="#states">States</a>
     <a href="#text">Text</a>
+    <a href="#rich-text">Rich Text</a>
     <a href="#fonts">Fonts</a>
     <a href="#images">Images</a>
     <a href="#canvas">Canvas</a>
@@ -114,6 +117,12 @@
       <p>Checkbox and radio elements can be drawn by clicking and dragging on the canvas with their respective tools. Both elements have a minimum width of 66 px and minimum height of 22 px, that are applied when drawing, but can be adjusted later.</p>
       <p>When a checkbox or radio element is added to the canvas, three elements are actually created: a checkbox or radio, a label and a container for them both.</p>
       <img src="images/radio-checkbox-structure.gif" alt="">
+
+      <h2>Embed Tool (M)</h2>
+      <p>The embed tool allows you to insert raw HTML, iframe, google maps, youtube and vimeo elements into your designs. Embedded elements can be drawn just like elements. Once drawn (or double clicked for existing embed elements) the embed tool options will be displayed allowing you to insert the different types of content.<p>
+      <img src="images/embed-tool.png" alt="Embed Tool dialog">
+
+      <p>By default Macaw will NOT display your embedded content while in the editor or in the preview browser but it will display correctly in your published files.</p>
     </section>
 
     <section id="positioning">
@@ -275,17 +284,123 @@
 
     </section>
 
+    <section id="display">
+      <h1>Display</h1>
+      <p>Macaw allows you to toggle how elements are displayed both in the editor and on publish. This setting allows you to hide elements in Macaw to aid with designing your pages and set elements to display none on publish. The latter helps to create hidden menus, etc.
+
+      <p>Display can be set by using the display toggle buttons in the inspector or via the element's layer in the outline. There are three states of visibility for all elements. These states are:</p>
+
+      <h2>Display States</h2>
+      <div class="button-list">
+        <p><img src="images/display-visible.png" class="img-display-visible"> <strong class="key">Visible</strong> The element is visible in both Macaw and in the published files.</p>
+        <p><img src="images/display-invisible.png" class="img-display-invisible"> <strong class="key">Invisible</strong> The element is hidden in Macaw but is still displayed on publish.</p>
+        <p><img src="images/display-none.png" class="img-display-none"> <strong class="key">None</strong> The element is invisible in both Macaw and in the published files.</p>
+      </div>
+      <p>NOTE: While the element is display none it will not be selectable.</p>
+
+
+      <h2>Inspector</h2>
+      <p>The display toggle tools in the inspector are located to the right of the element name, id and variable fields. The item highlighted in blue indicates the element's current display state. Clicking on any of the display buttons will update the selected elements display setting.</p>
+      <img src="images/display-inspector.png" class="img-display-inspector">
+
+      <h2>Outline</h2>
+      <p>The display toggle in the outline is located on the left side of the element's layer and is indicated by an "eye" icon or a dot icon if set to display none. Clicking on the "eye" icon will toggle the element's display between "visible" and "invisible". <strong class="key osx">⌘+Click</strong> <strong class="key win">Ctrl+Click</strong> will toggle it's display between "visible" and "none".</p>
+      <img src="images/display-outline.png" class="img-display-outline">
+    </section>
+
+    <section id="states">
+      <h1>States</h1>
+      <p>Macaw allows you to set :active, :hover and :focus states for all your elements. All visual styles can be set per state except dimension and position properties. States can also be set per breakpoint.</p>
+
+      <h2>State Buttons</h2>
+      <p>Element states can be applied by using the state buttons located just under element name, id and variable fields. They are visible when you have a single element selected.</p>
+      <img src="images/states-buttons.png" class="img-states-buttons">
+
+      <h2>Available States</h2>
+      <p><strong class="key">Default</strong> The default state represents how the element will be styled normally. The default state will result in no CSS psuedo-class being used in the published CSS.</p>
+      <p><strong class="key">Hover</strong> The hover state represents how the element will be styled while the mouse is over the element. The hover state will use the :hover psuedo-class in the published CSS.</p>
+      <p><strong class="key">Active</strong> The active state represents how the element will be styled when activated by the user. When a user mouses down on a button for example. The active state will use the :active psuedo-class in the published CSS.</p>
+      <p><strong class="key">Focus</strong> The focus state represents how the element will be styled while the element has focus. The focus state will use the :focus psuedo-class in the published CSS.</p>
+
+      <h2>State Buttons (Continued)</h2>
+      <p>Each state button is displayed differently depending on if the state is the currently selected state and if it does or does not contain styles.</p>
+      <img src="images/states-styles.png" class="img-states-styles">
+      <p>In the above image the "Default" state is dark grey with blue text to indicate it is the currently active state and any style changes will be saved on it. The "Focus" state has white text to indicate that the current element has focus styles. And the "Hover" and "Active" states have grey text which means the current element does not have styles for them.</p>
+
+
+      <h2>Setting State Styles</h2>
+      <p>To set state specific styles on an element by doing the following:</p>
+      <p>1. Select the element you wish to style.</p>
+      <p>2. Select the appropriate state (default, hover, active or focus).</p>
+      <p>3. Style away.</p>
+
+      <p>NOTE: While an element is selected Macaw will stay on the currently selected state. As soon as the element is deselected it will switch by to the "default" state.</p>
+
+      <h2>Clearing State Styles</h2>
+      <p>Styles for a specific state can be cleared by right clicking on a state's button and clicking "Clear Styles".</p>
+      <img src="images/states-clear.png" class="img-states-clear">
+
+    </section>
+
     <section id="text">
       <h1>Text</h1>
 
       <h2>Styling Text</h2>
       <p>Macaw allows you to set a variety of properties on your text elements using the Typography palette. The order of the properties in the palette from left to right, top to bottom are: font family, font weight, font size, line height, color, italic, uppercase, underline, letter spacing, word spacing, text indent, paragraph spacing and text alignment.</p>
       <img src="images/text-styling.png" class="img-text-styling">
-      <p>NOTE: Currently all text style changes are applied to the entire text element.</p>
 
       <h2>Type Stats</h2>
       <p>Macaw provides more advanced stats for each of your text elements to help you find the right text styles for your design. Located in the bottom right of the Typography palette, Macaw provides calculated values for total characters and average characters per line.</p>
       <img src="images/text-type-stats.png" class="img-text-type-stats">
+
+    </section>
+    <section id="rich-text">
+      <h1>Rich Text Editing</h1>
+      <p>Macaw allows you to add inline styles to text inside your text elements. This is done by applying styles to a tag or node within your text. Each text element can contain its own styles for each node that will be globally applied to all like nodes within that text element. Rich text styles are also responsive and can have styles per state.</p>
+      <p>NOTE: Currently Macaw only allows for the creation of nodes one level deep restricting the creation of nodes within nodes.</p>
+
+      <h2>Available Tags/Nodes</h2>
+      <p>Macaw allows you to add nodes with tags of span, a, em and strong. All tags have been stripped of their default styling to allow for the most customization.</p>
+
+      <h2>Creating Rich Text Node</h2> 
+      <p>You can do this by doing the following:</p>
+
+      <img src="images/rich-text-create-node.png" class="img-rich-text-create-node">
+
+      <p>1. Begin by going into edit mode for your text.</p>
+      <p>2. Select the text that you want to style.</p>
+      <p>3. Using the inspector panel on the right select the tag you wish to wrap your selection.</p>
+      <p>4. Style the new node using the palettes on the right.</p>
+
+      <img src="images/rich-text-style-node.png" class="img-rich-text-style-node">
+
+      <h2>Selecting Nodes</h2>
+      <p>When a text element contains nodes you can select an entire node's contents by double clicking on any of the text inside it or by placing your cursor anywhere in it's text. In addition if a selection is made that partially contains a node the selection will be updated to either contain just the node OR to contain the text without the node. This is to ensure that the code inside your text element is as clean as possible.</p>
+
+      <h2>Styling Text Nodes</h2>
+      <p>Styling text nodes within text elements is as easy as placing your cursor anywhere inside the node OR selecting the entire nodes contents (double click anywhere within the node's text). Once a node is selected you can use the palettes on the right to style the node.</p>
+
+      <h2>Shared Styles</h2>
+      <p>All nodes that share the same tag will share styles within each text element. This just means that if you create a blue link in the text all anchors in that text element will be blue. In the event you update that link to be red all anchors within the text will be updated as well. This is to allow you to edit styles quickly across entire text elements.</p>
+
+      <h3>Example</h3>
+
+      
+      <img src="images/rich-text-shared-styles1.png" class="img-rich-text-shared-styles">
+      <p>Initial styles for spans within the text.</p>
+
+      <img src="images/rich-text-shared-styles2.png" class="img-rich-text-shared-styles">
+      <p>After changing color and text decoration for a single span all other spans were updated.</p>
+
+      <h2>Copying Rich Text Styles</h2>
+      <p>In the event you have two text elements that should contain the same rich text styles you can use the "Copy Visual Attributes" command to copy both the element's styles and all its rich text node styles over to the other element.</p>
+
+      <h2>Changing a Node's Tag</h2>
+      <p>An existing nodes tag can be changed at any time by selecting the node and using the tag buttons at the top of the inspector. On change of the tag if any existing styles exist for the new tag they will be applied to the node.</p>
+
+      <h2>Deleting a Node</h2>
+      <p>Nodes can be removed by first selecting the tag and clicking the "No Tag" button located in the inspector.</p>
+      <img src="images/rich-text-no-node.png" class="img-rich-text-no-node">
     </section>
 
     <section id="fonts">
@@ -452,7 +567,7 @@
       <p>Layers for container elements can be expanded/collapsed to display/hide children elements for easier traversal of the outline. Click the arrow icon to expand/collapse layers.</p>
 
       <h2>Toggle Layer Visibility</h2>
-      <p>The visibility of layers in Macaw can be toggled on/off using the eye (icon) next to each layer. If a container layer with children is toggled all its children layers will also be toggled as well.</p>
+      <p>See the <a href="#display">Display</a> section of the documentation for info on toggle element visibility and display.</p>
 
       <h2>Locking Layers</h2>
       <p>In some situations you may want to lock layers to make them uneditable. This allows you to edit other parts of your document without having to worry about making unintended changes.</p>
