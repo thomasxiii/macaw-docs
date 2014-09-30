@@ -296,7 +296,7 @@
         <p><img src="images/display-invisible.png" class="img-display-invisible"> <strong class="key">Invisible</strong> The element is hidden in Macaw but is still displayed on publish.</p>
         <p><img src="images/display-none.png" class="img-display-none"> <strong class="key">None</strong> The element is invisible in both Macaw and in the published files.</p>
       </div>
-      <p>NOTE: While the element is display none it will not be selectable.</p>
+      <p>NOTE: While the element’s display state is set to none it will not be selectable.</p>
 
 
       <h2>Inspector</h2>
@@ -472,7 +472,7 @@
       <p>Note: To be able to crop images in your project you must enable &quot;Generate Optimized Images&quot; in your project's publish settings under the &quot;Images&quot; section. It can also be enabled by double clicking on an image. Macaw will prompt you and ask if you would like to enable it.</p>
 
       <h3>Perform Image Crop</h3>
-      <p>To begin cropping an image element, double click it on the canvas. This will enter image crop mode and additional transform handles will become available. Within crop mode you can scale the image, move it within its its frame and modify the frame width and height using the frame handles at the top, right, bottom and left sides. Clicking the <strong class="btn">Reset</strong> button in the image palette will undo all cropping applied to an image. See "Resetting Images" below.</p>
+      <p>To begin cropping an image element, double click it on the canvas. This will enter image crop mode and additional transform handles will become available. Within crop mode you can scale the image, move it within its its frame and modify the frame width and height using the frame handles at the top, right, bottom and left sides. Once the crop is committed (see below), clicking the <strong class="btn">Reset</strong> button in the image palette will undo all cropping applied to an image. See "Resetting Images" below.</p>
 
       <p><strong>Note:</strong> Images cannot be resized / scaled to be smaller than the current crop area. To sacle an image when in crop mode, you must first crop the image.</p>
 
@@ -540,7 +540,7 @@
 
     <section id="components">
       <h1>Components</h1>
-      <p>Components are structured groups of elements that can be reused throughout your project. They live in the Library of your project and can be retrieved there on any page.</p>
+      <p>Components are structured groups of elements that can be reused throughout your project. They live in the Library of your project and can be retrieved from there for use on any page.</p>
 
       <h2>Creating Components</h2>
       <p>To create a component, select the elements that will make up the component and use the command <strong class="cmd">Element > Create Component</strong> or <strong class="key osx">⌘+K</strong> <strong class="key win">Ctrl+K</strong>. You will be asked to name the new component after which the component will become available in your library. You can then create a new instance of the component by dragging it from the library to the canvas.</p>
@@ -553,7 +553,7 @@
       <h1>Outline (O)</h1>
       <p>Macaw's Outline panel is much like the layers palette found in other design tools. It shows you all the elements on the current page, how those elements are structured and it also displays the z-index of elements in your document. Elements that are higher in the outline will be displayed on top of elements below it. The outline is not just a visual tool. It can also be used to quickly structure your document, select elements, set element tags/classes (Renaming) and more.</p>
 
-      <p>The Outline can be toggled to using the "Outline" button in the top right corner of the app or using the <strong class="key">O</strong> key.</p>
+      <p>The Outline panel can be shown using the "Outline" button in the top right corner of the app or using the <strong class="key">O</strong> key.</p>
       <img src="images/outline-view.png" class="img-outline-view">
 
       <h2>Moving Elements</h2>
